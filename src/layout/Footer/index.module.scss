@@ -1,0 +1,35 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.footer {
+    padding-left: 290px;
+
+    .inner {
+        padding: 20px 50px 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        &__lst {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        &__item {
+            margin-left: 42px;
+        }
+
+        &__link {
+            display: inline-block;
+            letter-spacing: -0.02em;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.71;
+            color: $white;
+        }
+    }
+}

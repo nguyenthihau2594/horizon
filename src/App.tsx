@@ -1,17 +1,18 @@
+import Layout from 'layout/Layout';
+import Cart from 'pages/Cart';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-import Home from "./pages/Home";
-// import Components from "./components/Components";
-import Layout from "layout/Layout";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/components" element={<Components />} /> */}
-        <Route path="/layout" element={<Layout />} />
+        <Route path="/admin" element={<Layout />} >
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="cart" element={<Cart />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,30 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__home {
+        background-image: url(../img/icons/icon_home.svg);
+    }
+
+    &__cart {
+        background-image: url(../img/icons/icon_cart.svg);
+    }
+
+    &__table {
+        background-image: url(../img/icons/icon_table.svg);
+    }
+
+    &__kanban {
+        background-image: url(../img/icons/icon_kanban.svg);
+    }
+
+    &__user {
+        background-image: url(../img/icons/icon_user.svg);
+    }
+    &__key {
+        background-image: url(../img/icons/icon_key.svg);
+    }
+}

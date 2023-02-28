@@ -1,36 +1,38 @@
-import useBreadcrumbs from 'use-react-router-breadcrumbs';
 import s from "./index.module.scss";
 import cx from "classnames";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Breadcrumds } from 'components/Breadcrumbs/Breadcrumds';
+import avatar from 'assets/img/avatar.png';
+import { ReactComponent as Icon_search } from 'assets/img/icons/icon_search.svg';
+import { ReactComponent as Icon_alarm } from 'assets/img/icons/icon_alarm.svg';
+import { ReactComponent as Icon_mode } from 'assets/img/icons/icon_mode.svg';
+import { ReactComponent as Icon_tooltip } from 'assets/img/icons/icon_tooltip.svg';
 
-
-const routes = [
-  { path: "/", breadcrumb: "Pages" },
-  { path: "/admin/dashboard", breadcrumb: "Dashboard" },
-  { path: "/admin/cart", breadcrumb: "NFT Marketplace" },
-];
 export default function MainTop() {
-  const breadcrumbs = useBreadcrumbs(routes, { disableDefaults: true });
-  return (
-    <div className={s.main_top}>
-      <div className={s.main_top__left}>
-        <ul className={s.bread}>
-          
-{/*       {breadcrumbs.map(({match, breadcrumb },index) => (
-        <li key={index}
-        >
-          {breadcrumb}
-        </li>
-      ))} */}
 
-{breadcrumbs.map(({ match, breadcrumb }) => (
-        <NavLink key={match.pathname} to={match.pathname}>
-          {breadcrumb}
-        </NavLink>
-      ))}
-        </ul>
-        <strong className={s.title}>Main Dashboard</strong>
-      </div>
-    </div>
-  );
+    return (
+        <div className={s.main_top}>
+            <div className={s.main_top_left}>
+                <Breadcrumds />
+                {/* <strong className={s.title}>{location.pathname}</strong> */}
+            </div>
+            <div className={s.main_top_right}>
+                <form method="get" action="" className={s.search_form}>
+                    <input type="text" placeholder="Search" className={s.inp_search} />
+                    <button type="submit" className={cx(s.btn,s.btn_search)} ><Icon_search /></button>
+                </form>
+                <button type="button" className={cx(s.btn,s.btn_alarm)}><Icon_alarm /></button>
+                <button type="button" className={cx(s.btn,s.btn_mode)}><Icon_mode /></button>
+                <div className={s.tooltip}>
+                    <button type="button" className={cx(s.btn,s.btn_tooltip)}><Icon_tooltip /></button>
+                    <div className={s.info}>text text text text text text text text text </div>
+                </div>
+                <div className={s.profile}>
+                    <button type="button" className={cx(s.btn,s.btn_avatar)}><img src={avatar} alt="avatar" /></button>
+                    <ul className={s.profile_contro}>
+                        <li className={s.profile_contro_item}>Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
 }

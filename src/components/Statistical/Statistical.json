@@ -1,0 +1,42 @@
+[
+    {
+    "type": "normal",
+	"thumb": "/img/img_statistical1.png",
+	"title": "Earnings",
+	"unit": "350.4"
+    },
+    {
+        "type": "normal",
+        "thumb": "/img/img_statistical2.png",
+        "title": "Spend this Month",
+        "unit": "682.5"
+    },
+    {
+        "type": "normal",
+        "thumb": "/img/img_statistical1.png",
+        "title": "Sales",
+        "unit": "350.4",
+        "increase": true
+    },
+    {
+        "type": "normal",
+        "thumb": "/img/img_statistical1.png",
+        "title": "Earnings",
+        "unit": "350.4",
+        "increase": false
+    },
+    {
+        "type": "normal",
+        "thumb": "/img/img_statistical1.png",
+        "title": "Earnings",
+        "unit": "350.4",
+        "increase": false
+    },
+    {
+        "type": "normal",
+        "thumb": "/img/img_statistical1.png",
+        "title": "Earnings",
+        "unit": "350.4",
+        "increase": false
+    }
+]

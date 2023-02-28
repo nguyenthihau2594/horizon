@@ -1,9 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import s from "./index.module.scss";
 import cx from "classnames";
 import Logo from "assets/img/logo.png";
 
 export default function LNB() {
+  const location = useLocation();
+  const menu = [
+    {
+      to: "/admin/dashboard",
+      text: "Dashboard",
+      icon: "icon__home",
+    },
+    {
+      to: "/admin/cart",
+      text: "NFT Marketplace",
+      icon: "icon__cart",
+    },
+    {
+      to: "/admin/table",
+      text: "Tables",
+      icon: "icon__table",
+    },
+    {
+      to: "/admin/kanban",
+      text: "Kanban",
+      icon: "icon__kanban",
+    },
+    {
+      to: "/admin/user",
+      text: "Profile",
+      icon: "icon__user",
+    },
+    {
+      to: "/admin/login",
+      text: "Sign In",
+      icon: "icon__key",
+    },
+  ];
+
   return (
     <div className={s.lnb}>
       <h1 className={s.logo}>
@@ -13,36 +47,20 @@ export default function LNB() {
       </h1>
       <div className={s.nav}>
         <ul className={s.nav__lst}>
-          <li className={s.nav__item}>
-            <Link to="/admin/dashboard" className={s.nav__link}>
-              <i className={cx(s.icon, s.icon__home)}></i>Dashboard
-            </Link>
-          </li>
-          <li className={s.nav__item}>
-            <Link to="/admin/cart" className={s.nav__link}>
-              <i className={cx(s.icon, s.icon__cart)}></i>NFT Marketplace
-            </Link>
-          </li>
-          <li className={s.nav__item}>
-            <Link to="/admin/table" className={s.nav__link}>
-              <i className={cx(s.icon, s.icon__table)}></i>Tables
-            </Link>
-          </li>
-          <li className={s.nav__item}>
-            <Link to="/admin/kanban" className={s.nav__link}>
-              <i className={cx(s.icon, s.icon__kanban)}></i>Kanban
-            </Link>
-          </li>
-          <li className={s.nav__item}>
-            <Link to="/admin/user" className={s.nav__link}>
-              <i className={cx(s.icon, s.icon__user)}></i>Profile
-            </Link>
-          </li>
-          <li className={s.nav__item}>
-            <Link to="/admin/login" className={s.nav__link}>
-              <i className={cx(s.icon, s.icon__key)}></i>Sign In
-            </Link>
-          </li>
+          {menu.map((item, index) => {
+            return (
+              <li className={s.nav__item} key={index}>
+                <Link to={item.to} className={s.nav__link}>
+                  <i
+                    className={cx(s.icon, s[`${item.icon}`], {
+                      [s.is_active]: item.to == location.pathname,
+                    })}
+                  ></i>
+                  {item.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className={s.lnb__pro}>

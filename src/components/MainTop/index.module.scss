@@ -2,3 +2,66 @@
 @import "assets/styles/_icons.scss";
 @import "assets/styles/_admin.scss";
 
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0;
+  &_search {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 11px;
+    height: 11px;
+  }
+  &_avatar {
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+}
+.main_top {
+  display: flex;
+  justify-content: space-between;
+
+  &_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 30px;
+    background: #111c44;
+    width: 422px;
+
+    .search_form {
+      position: relative;
+      width: 214px;
+
+      .inp_search {
+        width: 100%;
+        height: 41px;
+        padding: 10px 10px 10px 42px;
+        border: none;
+        border-radius: 49px;
+        background: #0b1437;
+        color: #fff;
+        outline: none;
+        box-sizing: border-box;
+      }
+    }
+    .tooltip {
+        font-size: 0;
+      .info {
+        display: none;
+      }
+    }
+    .profile {
+        font-size: 0;
+      .profile_contro {
+        display: none;
+      }
+    }
+  }
+}

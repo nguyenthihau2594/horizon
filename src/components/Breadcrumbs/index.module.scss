@@ -1,0 +1,36 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.bread {
+    &_lst {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.71;
+    }
+
+    &_item+&_item {
+        position: relative;
+        margin-left: 15px;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%);
+            content: "/";
+        }
+    }
+
+    .title {
+        font-size: 34px;
+
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 42px;
+    }
+}

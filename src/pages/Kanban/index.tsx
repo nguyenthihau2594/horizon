@@ -1,5 +1,5 @@
 
-import MainTop from "components/MainTop";
+import MainTop from "components/MainTop/MainTop";
 import LNB from "layout/LNB";
 import s from "./index.module.scss";
 

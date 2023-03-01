@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useLocation } from "react-router-dom";
 import useBreadcrumbs, { BreadcrumbsRoute } from "use-react-router-breadcrumbs";
-import s from "./index.module.scss";
+import s from "./Breadcrumbs.module.scss";
 
 interface breadcrumbName {
   name1?: string;

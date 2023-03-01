@@ -1,6 +1,6 @@
-import s from "./index.module.scss";
+import s from "./MainTop.module.scss";
 import cx from "classnames";
-import { Breadcrumds } from 'components/Breadcrumbs/Breadcrumds';
+import { Breadcrumds } from 'components/Breadcrumbs/Breadcrumbs';
 import avatar from 'assets/img/avatar.png';
 import { ReactComponent as Icon_search } from 'assets/img/icons/icon_search.svg';
 import { ReactComponent as Icon_alarm } from 'assets/img/icons/icon_alarm.svg';

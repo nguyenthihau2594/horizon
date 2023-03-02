@@ -5,6 +5,7 @@ import s from "./index.module.scss";
 import data from "components/Statistical/Statistical.json"
 import { StatisticalItemProps } from "components/Statistical/StatisticalItems";
 import  ChartLine  from "components/ChartLine/ChartLine";
+import ChartColumn from "components/ChartColumn/ChartColumn";
 
 export default function Dashboard() {
   return (
@@ -13,6 +14,7 @@ export default function Dashboard() {
       <StatisticalList data = {data as StatisticalItemProps[]} />
       <div className={s.chart}>
         <ChartLine />
+        <ChartColumn />
       </div>
     </div>
   );

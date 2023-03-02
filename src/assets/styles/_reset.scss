@@ -100,7 +100,9 @@ nav,
 section {
     display: block;
 }
-
+html{
+    -webkit-text-size-adjust: none
+}
 body {
     line-height: 1;
     font-family: $fontfamily;
@@ -109,6 +111,7 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: -0.02em;
 }
 
 ol,

@@ -3,16 +3,55 @@ import Highcharts, { SeriesOptionsType } from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { ReactComponent as Icon_calendar } from 'assets/img/icons/icon_calendar.svg';
 import { ReactComponent as Icon_drop_up } from 'assets/img/icons/icon_arrow_drop_up.svg';
+import IconMenu from 'assets/img/icons/icon_menu.svg';
+import exportData from "highcharts/modules/export-data";
+import exporting from "highcharts/modules/exporting";
+import fullscreen from "highcharts/modules/full-screen";
+
+exporting(Highcharts);
+exportData(Highcharts);
+fullscreen(Highcharts);
 
 const options: Highcharts.Options = {
+  
   chart: {
     type: "spline",
     animation: false,
     backgroundColor: "#111C44",
     borderRadius: 20,
     className: "chart_spline",
-    margin: [100,32,70,194]
+    margin: [100,32,70,194],
+    height: "345",
   },
+  exporting: {
+    enabled: true,
+    buttons: {
+      contextButton: {
+        menuItems:["viewFullscreen"],
+        symbolStroke: "transparent",
+        symbolFill: "transparent",
+        x: -30,
+        y:30,
+        symbol: `url(${IconMenu})`,
+        theme:{
+          fill: "transparent",
+          stroke:"none",
+          // states: {
+          //   hover: 
+          // }
+        },
+        symbolSize:33,
+        symbolX:33,
+        symbolY:33,
+        width:33,
+        height: 33,
+      }
+    }
+  },
+  
+  navigation: {
+    menuItemHoverStyle: {"background": "red"}
+},
   title: {
     text: ""
   },
@@ -46,7 +85,6 @@ const options: Highcharts.Options = {
       marker: {
           enabled: false
       },
-      name: undefined,
       data: [1, 0, 4, 7, -4,3],
       yAxis: 0,
       color: '#7551FF',
@@ -57,7 +95,6 @@ const options: Highcharts.Options = {
       marker: {
           enabled: false
       },
-      name: undefined,
       data: [3, 2, 5, 1, -8,6],
       yAxis: 0,
       lineWidth: 4,

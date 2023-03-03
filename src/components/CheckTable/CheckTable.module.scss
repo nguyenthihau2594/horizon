@@ -1,0 +1,74 @@
+.checktable {
+    width: calc(50% - 10px);
+    margin-top: 20px;
+    background: #111C44;
+    border-radius: 20px;
+    padding: 20px 30px;
+    position: relative;
+
+    .title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        display: block;
+    }
+    .btn_more{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+    }
+    .table{
+        width: 100%;
+        caption{
+            display: none;
+        }
+        th{
+            color: #A3AED0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: left;
+            padding: 12px 0;
+        }
+        td{
+            padding: 8px 0;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            .inp_checkbox{
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 100%;
+                width: 1px;
+                height: 1px;
+                &:checked+.inp_label::before{
+                    background: url(../../assets/img/icons/icon_check_on.svg);
+                }
+            }
+            .inp_label{
+                display: inline-block;
+                position: relative;
+                padding-left: 35px;
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../../assets/img/icons/icon_check_off.svg);
+                    border-radius: 100%;
+                    content: "";
+                }
+            }
+        }
+    }
+    .btn_more{
+        cursor: pointer;
+        border: none;
+        width: 37px;
+        height: 37px;
+        background: url(../../assets/img/icons/icon_more.svg);
+    }
+}

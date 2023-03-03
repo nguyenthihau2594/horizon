@@ -2,9 +2,10 @@
 @import "assets/styles/_icons.scss";
 @import "assets/styles/_admin.scss";
 
-.chart{
+.main_content{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 20px;
 }

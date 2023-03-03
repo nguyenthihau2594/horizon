@@ -3,7 +3,7 @@
 @import "assets/styles/_admin.scss";
 
 .chart_line{
-    width: 50%;
+    width: calc(50% - 10px);
     height: 345px;
     position: relative;
     .statistic{

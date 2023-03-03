@@ -1,17 +1,8 @@
-import s from "./ChartColumn.module.scss";
+import s from "./ChartTraffic.module.scss";
 import Highcharts, { SeriesOptionsType } from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HC_rounded from "highcharts-rounded-corners";
-import exportData from "highcharts/modules/export-data";
-import exporting from "highcharts/modules/exporting";
-import fullscreen from "highcharts/modules/full-screen";
-import { ReactComponent as Icon_calendar } from 'assets/img/icons/icon_calendar.svg';
 import { ReactComponent as Icon_drop_up } from 'assets/img/icons/icon_arrow_drop_up.svg';
-import IconMenu from 'assets/img/icons/icon_menu.svg';
-
-exporting(Highcharts);
-exportData(Highcharts);
-fullscreen(Highcharts);
 
 const options: Highcharts.Options = {
  
@@ -20,46 +11,15 @@ const options: Highcharts.Options = {
     animation: false,
     backgroundColor: "#111C44",
     borderRadius: 20,
-    className: "chart_spline",
-    margin: [66,18,60,18],
     height: "345",
+    className: "chart_traffic",
+    margin: [100,10,60,10]
   },
   exporting: {
-    enabled: true,
-    buttons: {
-      contextButton: {
-        menuItems:["viewFullscreen"],
-        symbolStroke: "transparent",
-        x: -30,
-        y:30,
-        symbol: `url(${IconMenu})`,
-        theme:{
-          fill: "transparent",
-          stroke:"none",
-        },
-        symbolSize:33,
-        symbolX:33,
-        symbolY:33,
-        width:33,
-        height: 33,
-      }
-    }
+    enabled: false,
   },
   title: {
-    text: "Weekly Revenue",
-    align: "left",
-    style:{
-      color: '#fff',
-      fontFamily: 'DM Sans',
-      fontWeight: '700',
-      fontSize: '24px',
-    },
-    margin: 13,
-    x: 30,
-    y: 30
-  },
-  subtitle: {
-    text: ""
+    text: undefined
   },
   xAxis: {
     categories: ["17", "18", "19", "20", "21", "22", "23", "24", "25"],
@@ -88,7 +48,7 @@ const options: Highcharts.Options = {
        column: {
            stacking: 'normal',
            borderWidth: 0,
-           maxPointWidth: 20,
+           maxPointWidth: 14,
             
        },
         series: {
@@ -102,18 +62,10 @@ const options: Highcharts.Options = {
     {
       borderRadiusTopLeft: "50%",
       borderRadiusTopRight: "50%",
-      data: [7, 5, 4, 6, 3,4,5,2,5],
-      color: '#6AD2FF',
-    },
-    {
-      data: [7, 5, 4, 6, 3,4,5,2,5],
-      color: '#39B8FF',
-    },
-    {
-      data: [7, 5, 4, 6, 3,4,5,2,5],
+      data: [5, 3, 8, 4, 6,9,2],
       color: '#7551FF',
     }
-  ] as SeriesOptionsType[]
+  ] as any
 
 }
 
@@ -122,9 +74,14 @@ HC_rounded(Highcharts);
 interface ExtendedPlotSeriesOptions extends Highcharts.PlotSeriesOptions {
   borderRadiusTopLeft: string;
 }
-export default function ChartColumn() {
+export default function ChartTraffic() {
   return (
-    <div className={s.chart_column}>
+    <div className={s.chart_traffic}>
+      <div className={s.chart_traffic_info}>
+        <span className={s.title}>Daily Traffic</span>
+        <span className={s.visitors}><strong className={s.number}>2.579</strong>Visitors</span>
+        <span className={s.statistic_detail}><Icon_drop_up />+2.45%</span>
+      </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );

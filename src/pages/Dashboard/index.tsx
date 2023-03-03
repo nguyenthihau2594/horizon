@@ -6,15 +6,19 @@ import data from "components/Statistical/Statistical.json"
 import { StatisticalItemProps } from "components/Statistical/StatisticalItems";
 import  ChartLine  from "components/ChartLine/ChartLine";
 import ChartColumn from "components/ChartColumn/ChartColumn";
+import CheckTable from "components/CheckTable/CheckTable";
+import ChartTraffic from "components/ChartTraffic/ChartTraffic";
 
 export default function Dashboard() {
   return (
     <div className={s.wrap}>
       <MainTop />
-      <StatisticalList data = {data as StatisticalItemProps[]} />
-      <div className={s.chart}>
+      <div className={s.main_content}>
+        <StatisticalList data = {data as StatisticalItemProps[]} />
         <ChartLine />
         <ChartColumn />
+        <CheckTable title="Check Table" />
+        <ChartTraffic />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-.chart_spline{
-  width: 600px;
-  height: 300;
+.highcharts-exporting-group .highcharts-button-box {
+    fill: transparent !important;
 }

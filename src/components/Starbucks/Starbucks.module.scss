@@ -1,0 +1,57 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.starbucks {
+    overflow: hidden;
+    position: relative;
+    width: calc(25% - 15px);
+    margin-top: 20px;
+    padding: 20px 33px 33px;
+    border-radius: 20px;
+    background-color: $color5;
+
+    .img_bg {
+        margin: 0 -13px;
+        display: block;
+        font-size: 0;
+    }
+
+    .img {
+        display: block;
+        margin: -30px 0 13px;
+        font-size: 0;
+    }
+
+    .title {
+        display: block;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 6px;
+    }
+    .desc{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+        line-height: 30px;
+        color: #A3AED0;
+        svg{
+            margin-right: 10px;
+        }
+    }
+
+    .btn_more {
+        position: absolute;
+        top: 34px;
+        right: 34px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.47) 0%, rgba(255, 255, 255, 0) 110.84%);
+        background-color: transparent;
+        backdrop-filter: blur(25px);
+        padding: 0;
+        font-size: 0;
+    }
+}

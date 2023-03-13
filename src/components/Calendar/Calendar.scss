@@ -1,0 +1,236 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: none !important;
+}
+
+.fc-daygrid-day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.fc-daygrid-event-harness-abs {
+    bottom: 0;
+    z-index: 1;
+}
+
+.fc-h-event {
+    z-index: -1;
+    height: 40px;
+    border: none;
+    background: #1B254B;
+    border-radius: 40px;
+    margin-top: 0 !important;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end {
+    margin: 0;
+}
+
+.fc-event-start,
+.fc-event-end {
+    position: relative;
+}
+
+.fc-event-start::before,
+.fc-event-end::after {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #7551FF;
+    content: '';
+}
+
+.fc-event-start::before {
+    left: 3px;
+}
+
+.fc-event-end::after {
+    right: 3px;
+}
+
+.calendar {
+    position: relative;
+    width: calc(25% - 15px);
+    margin-top: 20px;
+    padding: 16px 25px;
+    border-radius: 20px;
+    background-color: $color5;
+
+    .fc {
+        .fc-toolbar.fc-header-toolbar {
+            margin-bottom: 5px;
+        }
+
+        .fc-daygrid-day-events {
+            position: absolute;
+            top: -2px;
+            right: 0;
+            left: 0;
+            min-height: 40px;
+            margin: 0;
+        }
+
+        .fc-daygrid-day-top {
+            height: 35px;
+        }
+
+        .fc-daygrid-day.fc-day-today {
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+
+            &::before {
+                position: absolute;
+                top: -2px;
+                left: 50%;
+                z-index: -1;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background-color: #1B254B;
+                transform: translateX(-50%);
+                content: '';
+            }
+        }
+
+        .fc-day-other .fc-daygrid-day-top {
+            opacity: 1;
+        }
+    }
+
+    .calendar_content {
+        background-color: transparent;
+
+        table {
+            border: none;
+        }
+    }
+
+    .calendar_th,
+    .calendar_td {
+        width: 47px;
+        height: 34px;
+        border: none;
+    }
+
+    .calendar_th {
+        height: 36px;
+    }
+
+    .fc-col-header-cell-cushion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .fc-Month-button,
+    .fc-Year-button {
+        position: relative;
+        border-radius: 40px !important;
+        background-color: transparent;
+        border: none;
+        padding: 8px 32px 8px 16px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: $fontfamily;
+        outline: none;
+
+        &::before {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            background: url(../../assets/img/icons/icon_arrow_down.svg);
+            content: '';
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .fc-Month-button {
+        margin-right: 38px;
+        background: #1B254B;
+
+        &:hover {
+            background: #1B254B;
+        }
+    }
+}
+
+.popup_month,
+.popup_year {
+    // display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000000a0;
+    z-index: 99;
+    color: $black;
+
+    &.is_show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .popup_content{
+        width: 550px;
+        height: 350px;
+        background: #1d254c;
+        padding: 50px 40px 20px;
+        border-radius: 20px;
+        color: $white;
+        text-align: center;
+        .title{
+            font-size: 25px;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            display: block;
+        }
+        .month_list{
+            display: flex;
+            align-items: initial;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .month_item{
+            margin: 5px 1%;
+            width: 23%;
+            .btn_month{
+                background-color: transparent;
+                border: none;
+                color: $white;
+                background-color: $color2;
+                padding: 10px 20px;
+                width: 100%;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover,&.is_active{
+                    background-color: #54b9ff;
+                }
+            }
+        }
+    }
+}

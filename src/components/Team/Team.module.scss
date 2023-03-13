@@ -1,0 +1,83 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.team {
+    position: relative;
+    width: calc(25% - 15px);
+    margin-top: 20px;
+    padding: 19px 23px 26px;
+    border-radius: 20px;
+    background-color: $color5;
+
+    .title {
+        display: block;
+        margin-bottom: 24px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+
+    .btn_more_all {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .member {
+        &_item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding: 12px 16px;
+            border-radius: 16px;
+            background: #1B254B;
+
+            .avatar {
+                overflow: hidden;
+                width: 46px;
+                height: 46px;
+                margin-right: 18px;
+                border-radius: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .info {
+                .name {
+                    display: block;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+
+                .job {
+                    display: block;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: #A3AED0;
+                    margin-top: -3px;
+                }
+            }
+
+            .btn_more {
+                position: absolute;
+                top: 23px;
+                right: 16px;
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+
+            &+.member_item {
+                margin-top: 17px;
+            }
+        }
+    }
+}

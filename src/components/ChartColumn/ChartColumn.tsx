@@ -66,7 +66,7 @@ const options: Highcharts.Options = {
     lineWidth: 0,
     labels:{
       autoRotationLimit:100,
-      align: 'left',
+      align: 'center',
       style : {
         color:'#A3AED0',
         fontSize: "12px",

@@ -67,7 +67,7 @@ export function Breadcrumds() {
   const title : any = routes.find(route => { return route.path === loaction.pathname})?.props?.name2
   return (
     <div className={s.bread}>
-      <ul className={s.bread_lst}>
+      <ul className={s.bread_list}>
         {
         breadcrumbs.map(({ match, breadcrumb }) => 
         (

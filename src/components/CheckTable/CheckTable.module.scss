@@ -1,7 +1,11 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
 .checktable {
     width: calc(50% - 10px);
     margin-top: 20px;
-    background: #111C44;
+    background-color: $color5;
     border-radius: 20px;
     padding: 20px 30px;
     position: relative;

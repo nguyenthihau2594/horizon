@@ -1,0 +1,88 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.tasks_wrap{
+    position: relative;
+    width: calc(25% - 15px);
+    margin-top: 20px;
+    padding: 18px 20px 43px 30px;
+    border-radius: 20px;
+    background-color : $color5;
+    .checkall{
+        margin-bottom: 30px;
+    }
+    .tasks_item{
+        position: relative;
+        .btn_more{
+            position: absolute;
+            top: 2px;
+            right: 0;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: url(../../assets/img/icons/icon_more2.svg);
+        }
+        &+.tasks_item{
+            margin-top: 19px;
+        }
+    }
+    .inp_checkbox{
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 1px;
+        height: 1px;
+        &:checked+.inp_label::before{
+            background: url(../../assets/img/icons/icon_check_on.svg);
+        }
+    }
+    .inp_label{
+        display: inline-block;
+        position: relative;
+        padding-left: 43px;
+        line-height: 28px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        &::before{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            background: url(../../assets/img/icons/icon_check_off.svg);
+            transform: translateY(-50%);
+            content: "";
+        }
+        &.inp_labelall{
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 38px;
+            &::after{
+            position: absolute;
+            top: 50%;
+            left: -7px;
+            width: 38px;
+            height: 38px;
+            border-radius: 100%;
+            background: $color4;
+            transform: translateY(-50%);
+            content: "";
+        }
+        }
+    }
+    .btn_more_all{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        width: 37px;
+        height: 37px;
+        border: none;
+        background: url(../../assets/img/icons/icon_more.svg);
+        cursor: pointer;
+    }
+}

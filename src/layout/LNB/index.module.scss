@@ -2,11 +2,11 @@
 @import "assets/styles/_icons.scss";
 
 .lnb {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 290px;
-    min-height: 100vh;
+    height: 100vh;
     padding: 25px 0 0;
     background-color: $color4;
 

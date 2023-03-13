@@ -46,7 +46,7 @@ export default function LNB() {
         </Link>
       </h1>
       <div className={s.nav}>
-        <ul className={s.nav__lst}>
+        <ul className={s.nav__list}>
           {menu.map((item, index) => {
             return (
               <li className={s.nav__item} key={index}>

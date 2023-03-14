@@ -1,5 +1,5 @@
 import Layout from 'layout/Layout';
-import Cart from 'pages/Cart';
+import Marketplace from 'pages/Marketplace';
 import User from 'pages/User';
 import Tables from 'pages/Tables';
 import Kanban from 'pages/Kanban';
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/admin" element={<Layout />} >
           <Route path="dashboard" index element={<Dashboard />} />
-          <Route path="cart" element={<Cart />} />
+          <Route path="marketplace" element={<Marketplace />} />
           <Route path="user" element={<User />} />
           <Route path="table" element={<Tables />} />
           <Route path="kanban" element={<Kanban />} />

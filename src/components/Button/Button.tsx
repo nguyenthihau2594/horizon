@@ -5,11 +5,12 @@ import s from "./Button.module.scss";
 type ButtonProps = {
 	children: string,
 	className?: string,
-	isfullWidth?:boolean
+	isfullWidth?:boolean,
+	onClick?: () => void,
 }
 
-export function Button({children, className, isfullWidth = false} : ButtonProps) {
+export function Button({children, className, isfullWidth = false, onClick} : ButtonProps) {
 	return (
-		<button type="button" className={cx(`${className && className}`, s.btn, { [s.full_size]: isfullWidth })}>{children}</button>
+		<button type="button" className={cx(`${className && className}`, s.btn, { [s.full_size]: isfullWidth })} onClick={onClick}>{children}</button>
 	);
 }

@@ -2,6 +2,8 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import "./Calendar.scss";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "components/Button/Button";
+import { isThisTypeNode } from "typescript";
 
 
 function Calendar() {
@@ -9,6 +11,8 @@ function Calendar() {
   const [isShowPopup, setShowPopup] = useState(false);
   const [isShowYPopup, setShowYPopup] = useState(false);
   const [date, setDate] = useState(new Date());
+  const [year,setYear] = useState(date.getFullYear())
+  const [month,setMonth] = useState(date.getMonth())
 
   const openMonth = () =>{
     setShowPopup(true);
@@ -18,12 +22,22 @@ function Calendar() {
   }
 
   const handleMonthClick = (month: number) => {
-    setDate(new Date(2023, month, 1));
+    setDate(new Date(year, month, 1));
+    setMonth(month)
     setShowPopup(false);
   }
 
-  const handleYearClick = () => {
-    
+  const handleYearSubmit = () => {
+    setDate(new Date(year, month, 1));
+    setYear(year)
+    setShowYPopup(false);
+  }
+
+  const  handleClickLayer = (e : any) =>{
+    if(e.target === e.currentTarget){
+      setShowYPopup(false);
+      setShowPopup(false);
+    }
   }
 
   useEffect(() => {
@@ -57,7 +71,7 @@ function Calendar() {
             }
           },
           Year: {
-            text: 'Year',
+            text: date.getFullYear().toString(),
             click: function () {
               openYear();
             }
@@ -68,7 +82,7 @@ function Calendar() {
         dayCellClassNames="calendar_td"
         dayHeaderClassNames="calendar_th"
       />
-      {isShowPopup && <div className="popup_month">
+      {isShowPopup && <div className="popup_month" onClick={e => {handleClickLayer(e)}}>
         <div className="popup_content">
           <strong className="title">Please select the month of the year</strong>
           <ul className="month_list">
@@ -87,11 +101,11 @@ function Calendar() {
           </ul>
         </div>
       </div>}
-      {isShowYPopup && <div className="popup_year">
+      {isShowYPopup && <div className="popup_year" onClick={e => {handleClickLayer(e)}}>
         <div className="popup_content">
           <strong className="title">Enter the year in the input box</strong>
-          <input type="text" />
-          <button type="button" onClick={() => handleYearClick()}></button>
+          <input type="number" className="inp_text" defaultValue={year} onChange={e => setYear(Number(e.target.value))} />
+          <Button className="btn_submit" onClick={() => handleYearSubmit()}>Accept</Button>
         </div>
       </div>}
     </div>

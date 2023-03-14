@@ -1,0 +1,73 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.content {
+    &_wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    &_left {
+        width: 68.38%;
+
+        .discover {
+            padding: 57px 64px;
+            border-radius: 20px;
+            background: url(../../assets/img/marketplace/bg_cart_spotlight.png) center no-repeat;
+            background-size: cover;
+
+            &_info {
+                max-width: 377px;
+
+                .title {
+                    display: block;
+                    margin-bottom: 14px;
+                    font-size: 34px;
+                    line-height: 42px;
+                }
+
+                .desc {
+                    max-width: 332px;
+                    margin-bottom: 41px;
+                    font-size: 16px;
+                    color: #e3daff;
+                    line-height: 28px;
+                }
+
+                .btn_area {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .btn_discover {
+                        margin-right: 38px;
+                        padding: 11px 27px;
+                        border: none;
+                        border-radius: 16px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: $fontfamily;
+                        line-height: 24px;
+                        cursor: pointer;
+                    }
+
+                    .btn_playvideo {
+                        border: none;
+                        background-color: transparent;
+                        font-size: 16px;
+                        color: #E9E3FF;
+                        line-height: 28px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &_right {
+        width: 30.36%;
+    }
+}

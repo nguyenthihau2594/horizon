@@ -1,0 +1,141 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.nft_wrap {
+    margin-top: 20px;
+
+    .title_wrap {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 27px 20px 0;
+
+        .title {
+            display: inline-block;
+            font-size: 24px;
+            text-transform: capitalize;
+            line-height: 32px;
+        }
+
+        .tab_list {
+            position: absolute;
+            top: 27px;
+            right: 0;
+
+            .tab_item {
+                display: inline-block;
+                margin-left: 25px;
+                padding: 4px 25px;
+                border: none;
+                border-radius: 70px;
+                background-color: transparent;
+                font-size: 14px;
+                font-family: $fontfamily;
+                color: $white;
+                line-height: 24px;
+                cursor: pointer;
+
+                &:hover,
+                &.is_active {
+                    background: $color5;
+                }
+            }
+        }
+    }
+
+    .nft_list {
+        display: flex;
+        align-items: initial;
+        justify-content: space-between;
+
+        .nft_item {
+            position: relative;
+            width: 350px;
+            padding: 21px 21px 22px;
+            border-radius: 20px;
+            background: #111C44;
+
+            .img {
+                display: block;
+                overflow: hidden;
+                border-radius: 20px;
+                font-size: 0;
+
+                img {
+                    width: 100%;
+                }
+            }
+            .icon{
+                display: inline-block;
+                position: absolute;
+                top: 35px;
+                right: 35px;
+                z-index: 1;
+                width: 35px;
+                height: 35px;
+            }
+
+            .info {
+                padding: 0 6px 0 9px;
+
+                &_group {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    margin-top: 20px;
+                    + .info_group {
+                    }
+
+                    .name {
+                        display: block;
+                        width: 100%;
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+
+                    .author {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $color6;
+                        line-height: 20px;
+                    }
+
+                    .user {
+                        .num_plus,
+                        .avatar {
+                            display: inline-block;
+                            overflow: hidden;
+                            width: 35px;
+                            height: 35px;
+                            margin-left: -16px;
+                            border: 3px solid #1d254c;
+                            border-radius: 100%;
+                            box-sizing: border-box;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .num_plus {
+                            padding-top: 10px;
+                            background-color: #fff;
+                            font-size: 10px;
+                            font-weight: 700;
+                            color: $color2;
+                            text-align: center;
+                            line-height: 10px;
+                        }
+                    }
+                    .bid{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                    .btn_place_bid{
+                        padding: 5px 24px;
+                    }
+                }
+            }
+        }
+    }
+}

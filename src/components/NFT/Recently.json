@@ -1,0 +1,36 @@
+[
+    {
+        "thumb": "../img/marketplace/img_marketplace4.png",
+	    "icon" : true,
+        "name": "Swipe Circles",
+        "author": "By Peter Will",
+        "bid": 2.30,
+        "user": [
+            "../img/avatar/avatar4.png"
+        ]
+    },
+    
+    {
+        "thumb": "../img/marketplace/img_marketplace5.png",
+	    "icon" : true,
+        "name": "Colorful Heaven",
+        "author": "By Mark Benjamin",
+        "bid": 1.30,
+        "user": [
+            "../img/avatar/avatar2.png"
+        ]
+    },
+    
+    {
+        "thumb": "../img/marketplace/img_marketplace6.png",
+	    "icon" : false,
+        "name": "3D Cubes Art",
+        "author": "By Manny Gates",
+        "bid": 6.58,
+        "user": [
+            "../img/avatar/avatar2.png",
+            "../img/avatar/avatar3.png",
+            "../img/avatar/avatar4.png"
+        ]
+    }
+]

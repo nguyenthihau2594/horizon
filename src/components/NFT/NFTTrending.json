@@ -1,0 +1,39 @@
+[
+    {
+        "thumb": "../img/marketplace/img_marketplace1.png",
+	    "icon" : true,
+        "name": "Abstract Colors",
+        "author": "By Esthera Jackson",
+        "bid": 0.91,
+        "user": [
+            "../img/avatar/avatar1.png",
+            "../img/avatar/avatar2.png",
+            "../img/avatar/avatar3.png",
+            "../img/avatar/avatar4.png"
+        ]
+    },
+    
+    {
+        "thumb": "../img/marketplace/img_marketplace2.png",
+	    "icon" : true,
+        "name": "ETH AI Brain",
+        "author": "By Nick Wilson",
+        "bid": 2.82,
+        "user": [
+            "../img/avatar/avatar1.png",
+            "../img/avatar/avatar2.png"
+        ]
+    },
+    
+    {
+        "thumb": "../img/marketplace/img_marketplace3.png",
+	    "icon" : true,
+        "name": "Mesh Gradients",
+        "author": "By Will Smith",
+        "bid": 0.56,
+        "user": [
+            "../img/avatar/avatar3.png",
+            "../img/avatar/avatar4.png"
+        ]
+    }
+]

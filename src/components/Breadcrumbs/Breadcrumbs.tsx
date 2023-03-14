@@ -28,7 +28,7 @@ const routes: BreadcrumbsRoute[] = [
      },
   },
   {
-    path: "/admin/cart",
+    path: "/admin/marketplace",
     breadcrumb: CustomPropsBreadcrumb,
     props: {
       name1: "NFT Marketplace",

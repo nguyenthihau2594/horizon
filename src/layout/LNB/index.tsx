@@ -12,9 +12,9 @@ export default function LNB() {
       icon: "icon__home",
     },
     {
-      to: "/admin/cart",
+      to: "/admin/marketplace",
       text: "NFT Marketplace",
-      icon: "icon__cart",
+      icon: "icon__marketplace",
     },
     {
       to: "/admin/table",

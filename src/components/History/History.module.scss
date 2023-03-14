@@ -2,13 +2,12 @@
 @import "assets/styles/_icons.scss";
 @import "assets/styles/_admin.scss";
 
-.complextable {
+
+.creators {
     position: relative;
-    width: calc(50% - 10px);
-    margin-top: 20px;
     padding: 20px 30px;
     border-radius: 20px;
-    background-color : $color5;
+    background-color: $color5;
 
     .title {
         display: block;
@@ -17,17 +16,21 @@
         font-weight: 700;
         line-height: 32px;
     }
-    .btn_more{
+
+    .btn_more {
         position: absolute;
         top: 20px;
         right: 25px;
     }
-    .table{
+
+    .table {
         width: 100%;
-        caption{
+
+        caption {
             display: none;
         }
-        th{
+
+        th {
             padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 14px;
@@ -36,48 +39,54 @@
             text-align: left;
             line-height: 24px;
         }
-        td{
-            padding: 13px 0;
+
+        td {
+            padding: 10px 0;
             font-size: 14px;
-            font-weight: 700;
             line-height: 24px;
             vertical-align: middle;
-            &.status{
-                .info{
-                    display: flex;
-                    align-items: center;
-                    svg{
-                        margin-right: 5px;
+
+            &.name {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                line-height: 24px;
+
+                .avatar {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 8px;
+                    border-radius: 12px;
+                    font-size: 0;
+
+                    svg {
+                        width: 100%;
                     }
                 }
             }
-            &.progress{
-                .progress_bar{
+
+            &.progress {
+                .progress_bar {
                     display: inline-block;
                     position: relative;
                     width: 108px;
                     height: 8px;
                     border-radius: 21px;
-                    background-color: rgba(255, 255, 255, 0.1) ;
+                    background-color: rgba(255, 255, 255, 0.1);
                 }
-                .progress_info{
-                    top: 0;
-                    background-color: $color2;
-                    bottom: 0;
-                    height: 8px;
+
+                .progress_info {
                     display: inline-block;
-                    border-radius: 21px;
                     position: absolute;
+                    top: 0;
+                    bottom: 0;
                     z-index: 1;
+                    height: 8px;
+                    border-radius: 21px;
+                    background-color: $color2;
                 }
             }
         }
-    }
-    .btn_more{
-        width: 37px;
-        height: 37px;
-        border: none;
-        background: url(../../assets/img/icons/icon_more.svg);
-        cursor: pointer;
     }
 }

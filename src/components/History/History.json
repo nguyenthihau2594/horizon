@@ -1,0 +1,44 @@
+[
+    {
+        "name":"Colorful Heaven",
+        "author" : "By Mark Benjamin",
+        "thumb": "../img/marketplace/img_marketplace1.png",
+        "bid": 1.30,
+        "time" : "30s"
+    },
+    {
+        "name":"Abstract Colors",
+        "author" : "By Esthera Jackson",
+        "thumb": "../img/marketplace/img_marketplace2.png",
+        "bid": 0.91,
+        "time" : "58s"
+    },
+    {
+        "name":"ETH AI Brain",
+        "author" : "By Nick Wilson",
+        "thumb": "../img/marketplace/img_marketplace3.png",
+        "bid": 2.82,
+        "time" : "1m"
+    },
+    {
+        "name":"Swipe Circles",
+        "author" : "By Peter Will",
+        "thumb": "../img/marketplace/img_marketplace4.png",
+        "bid": 2.30,
+        "time" : "1m"
+    },
+    {
+        "name":"Mesh Gradients",
+        "author" : "By Will Smith",
+        "thumb": "../img/marketplace/img_marketplace5.png",
+        "bid": 0.56,
+        "time" : "2m"
+    },
+    {
+        "name":"3D Cubes Art",
+        "author" : "By Manny Gates",
+        "thumb": "../img/marketplace/img_marketplace6.png",
+        "bid": 6.58,
+        "time" : "3m"
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "name":"@maddison_c21",
+        "avatar": "../img/avatar/avatar6.png",
+        "artworks": 9821,
+        "rating" : 90
+    },
+    {
+        "name":"@karl.will02",
+        "avatar": "../img/avatar/avatar7.png",
+        "artworks": 7032,
+        "rating" : 80
+    },
+    {
+        "name":"@andreea.1z",
+        "avatar": "../img/avatar/avatar8.png",
+        "artworks": 5204,
+        "rating" : 70
+    },
+    {
+        "name":"@abraham47.y",
+        "avatar": "../img/avatar/avatar9.png",
+        "artworks": 4309,
+        "rating" : 65
+    },
+    {
+        "name":"@simmmple.web",
+        "avatar": "../img/avatar/avatar10.png",
+        "artworks": 3871,
+        "rating" : 60
+    },
+    {
+        "name":"@venus.sys",
+        "avatar": "../img/avatar/avatar11.png",
+        "artworks": 3152,
+        "rating" : 55
+    },
+    {
+        "name":"@ape.vpp8",
+        "avatar": "../img/avatar/avatar12.png",
+        "artworks": 2907,
+        "rating" : 50
+    },
+    {
+        "name":"@leon_pwrr",
+        "avatar": "../img/avatar/avatar13.png",
+        "artworks": 2309,
+        "rating" : 45
+    }
+]

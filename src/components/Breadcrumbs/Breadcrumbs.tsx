@@ -52,7 +52,7 @@ const routes: BreadcrumbsRoute[] = [
      },
   },
   {
-    path: "/admin/user",
+    path: "/admin/profile",
     breadcrumb: CustomPropsBreadcrumb,
     props: {
       name1: "Profile",

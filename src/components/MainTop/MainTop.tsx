@@ -8,7 +8,7 @@ import { ReactComponent as Icon_tooltip } from 'assets/img/icons/icon_tooltip.sv
 import { useState } from "react";
 import cx from "classnames";
 import s from "./MainTop.module.scss";
-import { Button } from 'components/Button/Button';
+import Button  from 'components/Button/Button';
 
 const Notifi = [
     {

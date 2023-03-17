@@ -2,7 +2,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import "./Calendar.scss";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "components/Button/Button";
+import Button  from "components/Button/Button";
 import { isThisTypeNode } from "typescript";
 
 

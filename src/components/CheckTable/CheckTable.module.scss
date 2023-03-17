@@ -28,12 +28,34 @@
             display: none;
         }
         th{
-            color: #A3AED0;
+            color: $color6;
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
             text-align: left;
             padding: 12px 0;
+            
+            &.arrange_title{
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                .arrange {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border: none;
+                    background-color: transparent;
+                    font-size: 14px;
+                    font-family: $fontfamily;
+                    color: $color6;
+                    line-height: 24px;
+                    cursor: pointer;
+    
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        margin-left: 7px;
+                    }
+                }
+            }
         }
         td{
             padding: 8px 0;

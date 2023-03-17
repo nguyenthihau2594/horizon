@@ -1,4 +1,4 @@
-import { Button } from "components/Button/Button";
+import Button  from "components/Button/Button";
 import s from "./Creators.module.scss"
 
 export interface CreatorsProps {
@@ -36,7 +36,6 @@ export default function CreatorsList({ data }: CreatorsListProps) {
                 <caption>Top Creators</caption>
                 <colgroup>
                     <col style={{ 'width': "50%" }} />
-                    <col style={{ 'width': "25%" }} />
                     <col style={{ 'width': "25%" }} />
                     <col />
                 </colgroup>

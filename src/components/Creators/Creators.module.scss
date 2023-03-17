@@ -21,6 +21,8 @@
         position: absolute;
         top: 20px;
         right: 25px;
+        padding: 4px 18px;
+        font-weight: 500;
     }
 
     .table {
@@ -35,7 +37,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 14px;
             font-weight: 500;
-            color: #A3AED0;
+            color: $color6;
             text-align: left;
             line-height: 24px;
         }
@@ -43,8 +45,8 @@
         td {
             padding: 10px 0;
             font-size: 14px;
-            line-height: 24px;
             vertical-align: middle;
+            line-height: 24px;
 
             &.name {
                 display: flex;

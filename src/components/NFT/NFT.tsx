@@ -2,7 +2,7 @@
 import cx from "classnames";
 import s from "./NFT.module.scss";
 import {ReactComponent as Icon_heart} from 'assets/img/icons/icon_heart.svg';
-import { Button } from "components/Button/Button";
+import Button  from "components/Button/Button";
 
 
 
@@ -12,7 +12,7 @@ export interface NFTProps {
 	name: string,
 	author: string,
 	bid: number,
-	user: [string]
+	user: string[]
 }
 interface NFTListProps {
 	kind: "trending" | "recently",

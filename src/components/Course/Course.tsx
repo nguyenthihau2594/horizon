@@ -6,7 +6,7 @@ import Avatar2 from "assets/img/avatar2.png"
 import Avatar3 from "assets/img/avatar3.png"
 import Avatar4 from "assets/img/avatar4.png"
 import s from "./Course.module.scss";
-import { Button } from "components/Button/Button"
+import Button  from "components/Button/Button"
 
 export default function Course() {
 	return (

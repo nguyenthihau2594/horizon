@@ -9,7 +9,7 @@ type ButtonProps = {
 	onClick?: () => void,
 }
 
-export function Button({children, className, isfullWidth = false, onClick} : ButtonProps) {
+export default function Button({children, className, isfullWidth = false, onClick} : ButtonProps) {
 	return (
 		<button type="button" className={cx(`${className && className}`, s.btn, { [s.full_size]: isfullWidth })} onClick={onClick}>{children}</button>
 	);

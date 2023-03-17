@@ -1,0 +1,85 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.project {
+    width: calc((100% - 40px)/100*33);
+    margin-top: 20px;
+    padding: 23px 30px 30px;
+
+    .title {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .desc{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $color6;
+        margin-bottom: 41px;
+    }
+    &_item{
+        background: $color4;
+        border-radius: 20px;
+        &+.project_item{
+            margin-top: 20px;
+        }
+        padding: 14px;
+        padding-right: 65px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        .thumb{
+            width: 80px;
+            height: 80px;
+            font-size: 0;
+            margin-right: 20px;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .info{
+            width: calc(100% - 100px);
+            .name{
+                font-size: 16px;
+                line-height: 1;
+                margin-bottom: 3px;
+            }
+            .subinfo{
+                .link{
+                    line-height: 20px;
+                    color:$color6;
+                    display: inline-block;
+                }
+                .btn_detail{
+                    display: inline-block;
+                    border: none;
+                    background-color: transparent;
+                    color: $white;
+                    margin-left: 17px;
+                    position: relative;
+                    &::before{
+                        content: '•';
+                        position: absolute;
+                        color:$color6;
+                        font-size: 14px;
+                        line-height: 20px;
+                        left: -11px;
+                        top: 0;
+                    }
+                }
+            }
+        }
+        .btn_edit{
+            position: absolute;
+            top: 45px;
+            right: 30px;
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

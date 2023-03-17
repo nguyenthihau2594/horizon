@@ -102,21 +102,26 @@
                     }
 
                     .user {
+
                         .num_plus,
                         .avatar {
                             display: inline-block;
                             overflow: hidden;
                             width: 35px;
                             height: 35px;
-                            margin-left: -16px;
                             border: 3px solid #1d254c;
                             border-radius: 100%;
                             box-sizing: border-box;
-
+        
                             img {
                                 width: 100%;
                             }
+                            &+.num_plus,
+                            &+.avatar{
+                                margin-left: -16px;
+                            }
                         }
+        
                         .num_plus {
                             padding-top: 10px;
                             background-color: #fff;

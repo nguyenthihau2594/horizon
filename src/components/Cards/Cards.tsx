@@ -2,7 +2,7 @@
 import cx from "classnames";
 import s from "./Cards.module.scss";
 import fingerprint from "assets/img/img_fingerprint.png"
-import { Button } from "components/Button/Button";
+import Button  from "components/Button/Button";
 
 
 

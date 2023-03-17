@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Education",
+        "kind": [
+            "Stanford University"
+        ]
+    },
+    {
+        "name": "Languages",
+        "kind": [
+            "English"," Spanish","Italian"
+        ]
+    },
+    {
+        "name": "Department",
+        "kind": [
+            "Product Design"
+        ]
+    },
+    {
+        "name": "Work History",
+        "kind": [
+            "Google", "Facebook"
+        ]
+    },
+    {
+        "name": "Organization",
+        "kind": [
+            "Simmmple Web LLC"
+        ]
+    },
+    {
+        "name": "Birthday",
+        "kind": [
+            "20 July 1986"
+        ]
+    }
+]

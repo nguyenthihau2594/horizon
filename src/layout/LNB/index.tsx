@@ -27,7 +27,7 @@ export default function LNB() {
       icon: "icon__kanban",
     },
     {
-      to: "/admin/user",
+      to: "/admin/profile",
       text: "Profile",
       icon: "icon__user",
     },

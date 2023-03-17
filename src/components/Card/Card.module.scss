@@ -1,0 +1,132 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.kanban {
+    position: relative;
+    width: calc((100% - 40px)/3);
+    padding: 28px 24px 24px;
+    border-radius: 20px;
+    background: $color5;
+
+    .title {
+        display: block;
+        margin-bottom: 43px;
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .btn_add {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 92px;
+        height: 35px;
+        border: none;
+        border-radius: 12px;
+        background: $color4;
+        cursor: pointer;
+    }
+
+    .card {
+        &_item {
+            position: relative;
+            padding: 18px 22px;
+            border-radius: 20px;
+            background: $color4;
+            .user {
+
+                .num_plus,
+                .avatar {
+                    display: inline-block;
+                    overflow: hidden;
+                    width: 35px;
+                    height: 35px;
+                    border: 3px solid #1d254c;
+                    border-radius: 100%;
+                    box-sizing: border-box;
+
+                    img {
+                        width: 100%;
+                    }
+                    &+.num_plus,
+                    &+.avatar{
+                        margin-left: -16px;
+                    }
+                }
+
+                .num_plus {
+                    padding-top: 10px;
+                    background-color: #fff;
+                    font-size: 10px;
+                    font-weight: 700;
+                    color: $color2;
+                    text-align: center;
+                    line-height: 10px;
+                }
+            }
+
+            &+.card_item {
+                margin-top: 20px;
+            }
+
+
+            .btn_edit {
+                position: absolute;
+                top: 22px;
+                right: 22px;
+                border: none;
+                background-color: transparent;
+            }
+            .btn_status{
+                padding: 7px 25px 6px;
+                text-transform: uppercase;
+                font-size: 10px;
+                line-height: 1.5;
+                font-weight: 700;
+                border-radius: 10px;
+                &_updates{
+                    background-color: #3965FF;
+                }
+                &_pending{
+                    background-color: #FFB547;
+                }
+                &_done{
+                    background-color: #01B574;
+                }
+                &_errors{
+                    background-color: #EE5D50;
+                }
+            }
+        }
+
+        &_title {
+            display: block;
+            margin-bottom: 10px;
+            padding-right: 40px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        &_thumb {
+            display: block;
+            margin: 20px 0 22px;
+            font-size: 0;
+            text-align: center;
+        }
+
+        &_desc {
+            margin-bottom: 29px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $color6;
+            line-height: 26px;
+        }
+
+        &_bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

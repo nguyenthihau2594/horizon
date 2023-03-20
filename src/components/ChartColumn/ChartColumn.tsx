@@ -5,8 +5,6 @@ import HC_rounded from "highcharts-rounded-corners";
 import exportData from "highcharts/modules/export-data";
 import exporting from "highcharts/modules/exporting";
 import fullscreen from "highcharts/modules/full-screen";
-import { ReactComponent as Icon_calendar } from 'assets/img/icons/icon_calendar.svg';
-import { ReactComponent as Icon_drop_up } from 'assets/img/icons/icon_arrow_drop_up.svg';
 import IconMenu from 'assets/img/icons/icon_menu.svg';
 
 exporting(Highcharts);
@@ -119,9 +117,6 @@ const options: Highcharts.Options = {
 
 HC_rounded(Highcharts);
 
-interface ExtendedPlotSeriesOptions extends Highcharts.PlotSeriesOptions {
-  borderRadiusTopLeft: string;
-}
 export default function ChartColumn() {
   return (
     <div className={s.chart_column}>

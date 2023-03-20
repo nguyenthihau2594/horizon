@@ -1,7 +1,6 @@
 
 import Card, { CardProps } from "components/Card/Card";
 import MainTop from "components/MainTop/MainTop";
-import LNB from "layout/LNB";
 import s from "./index.module.scss";
 import data from "./Kanban.json"
 

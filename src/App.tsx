@@ -3,6 +3,7 @@ import Marketplace from 'pages/Marketplace';
 import Profile from 'pages/Profile';
 import Tables from 'pages/Tables';
 import Kanban from 'pages/Kanban';
+import SignIn from 'pages/SignIn';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Dashboard from "./pages/Dashboard";
@@ -17,7 +18,8 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="table" element={<Tables />} />
           <Route path="kanban" element={<Kanban />} />
-          {/* <Route path="tables" element={<Tables />} /> */}
+        </Route>
+        <Route path="/admin/login" element={<SignIn />} >
         </Route>
       </Routes>
     </BrowserRouter>

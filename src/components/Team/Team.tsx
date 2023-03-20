@@ -6,11 +6,6 @@ import Avatar3 from "assets/img/avatar3.png"
 import {ReactComponent as MoreAll} from "assets/img/icons/btn_more.svg"
 import {ReactComponent as More} from "assets/img/icons/icon_more3.svg"
 
-type TeamProps = {
-	avatar: string,
-	name : string,
-	job : string
-}
 
 const member = [
 	{

@@ -2,7 +2,6 @@
 import s from "./Statistical.module.scss";
 import cx from "classnames";
 import { ReactComponent as Arrow } from 'assets/img/icons/icon_arrow_down.svg';
-import classNames from "classnames";
 
 export interface StatisticalItemProps {
 	type: 'normal' | 'select' | 'number' | 'increase',

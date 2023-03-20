@@ -9,11 +9,11 @@ import { ReactComponent as IconCloud } from 'assets/img/icons/icon_cloud.svg';
 import { ReactComponent as IconUpload } from 'assets/img/icons/icon_upload.svg';
 import { useState } from "react";
 import Project from "components/Project/Project";
+import General from "components/General/General";
+import Notifi from "components/Notifi/Notifi";
 
 export default function User() {
 	const [avatar, setAvatar] = useState<{ preview: "", name: "" }>();
-	const [droping, setDroping] = useState(false)
-	const [droped, setDroped] = useState(false)
 	const [dragActive, setDragActive] = useState(false)
 	const [error, setError] = useState(false)
 
@@ -21,95 +21,47 @@ export default function User() {
 	const handleChange = (e: any) => {
 		const file = e.target.files[0];
 		file.preview = URL.createObjectURL(file)
-		setAvatar(file);
-	}
+		const idxDot = file.name.lastIndexOf(".") + 1;
+		const extFile = file.name.substring(idxDot, file.length).toLowerCase();
 
-	const handleDragover = (e: any) => {
+		if (extFile==="jpg" || extFile === "jpeg" || extFile==="png" || extFile==="gif"){
+			setAvatar(file);
+			setError(false)
+		}
+		else{
+			setError(true)
+		}
+	}
+	const handleDrag = function(e : any) {
 		e.preventDefault();
 		e.stopPropagation();
-		setDroping(true)
-		setDroped(false)
-		return false;
-	}
+		if (e.type === "dragenter" || e.type === "dragover") {
+		  setDragActive(true);
+		} else if (e.type === "dragleave") {
+		  setDragActive(false);
+		}
+	  };
 
-	const handleDragleave = (e: any) => {
+	// triggers when file is dropped
+	const handleDrop = function(e : any) {
 		e.preventDefault();
 		e.stopPropagation();
-		setDroping(false)
-		setDroped(true)
-		return false;
-
-	}
-	const handleDragenter = (e: any) => {
-		e.preventDefault();
-		e.stopPropagation();
-		setDroping(false)
-		setDroped(true)
-	}
-
-	const handleDrop = function (e: any) {
-		e.preventDefault();
-		e.stopPropagation();
-		setDroping(false)
-		setDroped(true)
-		const file = e.dataTransfer.files[0]
-		file.preview = URL.createObjectURL(file)
+		setDragActive(false);
 		if (e.dataTransfer.files && e.dataTransfer.files[0]) {
 			const file = e.dataTransfer.files[0];
 			file.preview = URL.createObjectURL(file);
 			const idxDot = file.name.lastIndexOf(".") + 1;
-			console.log(idxDot);
 			const extFile = file.name.substring(idxDot, file.length).toLowerCase();
 
-			if (extFile === "jpg" || extFile === "jpeg" || extFile === "png" || extFile === "gif") {
+			if (extFile==="jpg" || extFile === "jpeg" || extFile==="png" || extFile==="gif"){
 				setAvatar(file);
 				setError(false)
 			}
-			else {
+			else{
 				setError(true)
 			}
 		}
-		return false;
-	}
-	// function handleFile(files : any) {
-	// 	alert("Number of files: " + files.length);
-	//   }
-
-
-	// const handleDrag = function(e : any) {
-
-	// 	e.preventDefault();
-	// 	e.stopPropagation();
-	// 	if (e.type === "dragenter" || e.type === "dragover") {
-	// 	  setDragActive(true);
-	// 	} else if (e.type === "dragleave") {
-	// 	  setDragActive(false);
-	// 	}
-	//   };
-
-	// // triggers when file is dropped
-	// const handleDrop = function(e : any) {
-	// 	e.preventDefault();
-	// 	e.stopPropagation();
-	// 	setDragActive(false);
-	// 	if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-	// 		const file = e.dataTransfer.files[0];
-	// 		file.preview = URL.createObjectURL(file);
-	// 		const idxDot = file.name.lastIndexOf(".") + 1;
-	// 		console.log(idxDot);
-	// 		const extFile = file.name.substring(idxDot, file.length).toLowerCase();
-
-	// 		if (extFile==="jpg" || extFile === "jpeg" || extFile==="png" || extFile==="gif"){
-	// 			setAvatar(file);
-	// 			setError(false)
-	// 		}
-	// 		else{
-	// 			setError(true)
-	// 		}
-	// 	}
-	// };
-
-
+	};
 	return (
 		<div className={s.wrap}>
 			<MainTop />
@@ -147,15 +99,9 @@ export default function User() {
 					<div className={s.upload}>
 						<div className={s.content}>
 							<input type="file" id="upload" className={s.inp_upload} onChange={e => handleChange(e)} />
-							<label htmlFor="upload" className={cx(s.label, { [s.droping]: droping }, { [s.droped]: droped })}
-								onDragOver={handleDragover}
-								onDragLeave={handleDragleave}
-								onDragEnter={handleDragenter}
-								onDrop={handleDrop}
-							>
-								{/* <label htmlFor="upload" className={cx(s.label)} 
+								<label htmlFor="upload" className={cx(s.label)} 
 							 onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}
-							 > */}
+							 >
 								{avatar ? (<><img src={avatar.preview} alt="" /><span className={s.txt}>{avatar.name}</span></>) : (<><IconUpload /><span className={s.txt}>Upload Files</span></>)}
 
 							</label>
@@ -171,6 +117,8 @@ export default function User() {
 					</div>
 				</div>
 				<Project className={s.content_box} />
+				<General className={s.content_box}  />
+				<Notifi className={s.content_box}  />
 			</div>
 		</div>
 	);

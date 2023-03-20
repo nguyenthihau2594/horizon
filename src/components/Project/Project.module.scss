@@ -14,29 +14,29 @@
         line-height: 32px;
     }
     .desc{
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: $color6;
         margin-bottom: 41px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $color6;
+        line-height: 26px;
     }
     &_item{
-        background: $color4;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding: 14px;
+        padding-right: 65px;
         border-radius: 20px;
+        background: $color4;
         &+.project_item{
             margin-top: 20px;
         }
-        padding: 14px;
-        padding-right: 65px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
         .thumb{
             width: 80px;
             height: 80px;
-            font-size: 0;
             margin-right: 20px;
+            font-size: 0;
             img{
                 width: 100%;
                 object-fit: cover;
@@ -45,31 +45,31 @@
         .info{
             width: calc(100% - 100px);
             .name{
+                margin-bottom: 3px;
                 font-size: 16px;
                 line-height: 1;
-                margin-bottom: 3px;
             }
             .subinfo{
                 .link{
-                    line-height: 20px;
-                    color:$color6;
                     display: inline-block;
+                    color:$color6;
+                    line-height: 20px;
                 }
                 .btn_detail{
                     display: inline-block;
+                    position: relative;
+                    margin-left: 17px;
                     border: none;
                     background-color: transparent;
                     color: $white;
-                    margin-left: 17px;
-                    position: relative;
                     &::before{
-                        content: '•';
                         position: absolute;
-                        color:$color6;
-                        font-size: 14px;
-                        line-height: 20px;
-                        left: -11px;
                         top: 0;
+                        left: -11px;
+                        font-size: 14px;
+                        color:$color6;
+                        line-height: 20px;
+                        content: '•';
                     }
                 }
             }
@@ -80,6 +80,7 @@
             right: 30px;
             border: none;
             background-color: transparent;
+            cursor: pointer;
         }
     }
 }

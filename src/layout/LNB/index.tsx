@@ -53,7 +53,7 @@ export default function LNB() {
                 <Link to={item.to} className={s.nav__link}>
                   <i
                     className={cx(s.icon, s[`${item.icon}`], {
-                      [s.is_active]: item.to == location.pathname,
+                      [s.is_active]: item.to === location.pathname,
                     })}
                   ></i>
                   {item.text}

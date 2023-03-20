@@ -1,7 +1,7 @@
 
 import cx from "classnames";
 import s from "./NFT.module.scss";
-import {ReactComponent as Icon_heart} from 'assets/img/icons/icon_heart.svg';
+import {ReactComponent as IconHeart} from 'assets/img/icons/icon_heart.svg';
 import Button  from "components/Button/Button";
 
 
@@ -24,7 +24,7 @@ export function NFTItem({ thumb, icon, name, author, bid, user }: NFTProps) {
 	return (
 		<div className={s.nft_item}>
 			<span className={s.img}><img src={thumb} alt="" /></span>
-			{icon === true && <span className={s.icon}><Icon_heart /></span>}
+			{icon === true && <span className={s.icon}><IconHeart /></span>}
 			<div className={s.info}>
 				<div className={s.info_group}>
 					<div className={s.info_txt}>

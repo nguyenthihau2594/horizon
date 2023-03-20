@@ -1,8 +1,8 @@
 import s from "./ChartLine.module.scss";
 import Highcharts, { SeriesOptionsType } from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { ReactComponent as Icon_calendar } from 'assets/img/icons/icon_calendar.svg';
-import { ReactComponent as Icon_drop_up } from 'assets/img/icons/icon_arrow_drop_up.svg';
+import { ReactComponent as IconCalendar } from 'assets/img/icons/icon_calendar.svg';
+import { ReactComponent as IconDropUp } from 'assets/img/icons/icon_arrow_drop_up.svg';
 import IconMenu from 'assets/img/icons/icon_menu.svg';
 import exportData from "highcharts/modules/export-data";
 import exporting from "highcharts/modules/exporting";
@@ -107,11 +107,11 @@ export default function ChartLine() {
   return (
     <div className={s.chart_line}>
       <div className={s.statistic}>
-        <button type="button" className={s.btn_calendar}><Icon_calendar />This month</button>
+        <button type="button" className={s.btn_calendar}><IconCalendar />This month</button>
         <strong className={s.money}>$37.5K</strong>
         <span className={s.statistic_info}>
           <span className={s.statistic_txt}>Total Spent</span>
-          <span className={s.statistic_detail}><Icon_drop_up />+2.45%</span>
+          <span className={s.statistic_detail}><IconDropUp />+2.45%</span>
         </span>
         <div className={s.check_group}>
           <input type="checkbox" className={s.inp_check} id="on_track" defaultChecked />

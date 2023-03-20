@@ -2,3 +2,51 @@
 @import "assets/styles/_icons.scss";
 @import "assets/styles/_admin.scss";
 
+
+.general {
+    width: calc((100% - 40px)/100*40);
+    margin-top: 20px;
+    padding: 23px 31px 12px;
+    .title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 15px;
+        display: block;
+        text-transform: capitalize;
+    }
+    .desc{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $color6;
+        margin-bottom: 31px;
+    }
+    &_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: initial;
+        flex-wrap: wrap;
+    }
+    &_item{
+        width: calc((100% - 20px)/2);
+        margin-bottom: 19px;
+        background: $color4;
+        border-radius: 20px;
+        padding: 23px 22px 29px;
+        .name{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $color6;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .kind{
+            display: flex;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+    }
+}

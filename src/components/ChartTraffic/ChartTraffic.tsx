@@ -1,8 +1,8 @@
 import s from "./ChartTraffic.module.scss";
-import Highcharts, { SeriesOptionsType } from 'highcharts';
+import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HC_rounded from "highcharts-rounded-corners";
-import { ReactComponent as Icon_drop_up } from 'assets/img/icons/icon_arrow_drop_up.svg';
+import { ReactComponent as IconDropUp } from 'assets/img/icons/icon_arrow_drop_up.svg';
 
 const options: Highcharts.Options = {
 
@@ -71,9 +71,6 @@ const options: Highcharts.Options = {
 
 HC_rounded(Highcharts);
 
-interface ExtendedPlotSeriesOptions extends Highcharts.PlotSeriesOptions {
-  borderRadiusTopLeft: string;
-}
 export default function ChartTraffic() {
   return (
     <div className={s.chart_traffic}>
@@ -82,7 +79,7 @@ export default function ChartTraffic() {
           <span className={s.title}>Daily Traffic</span>
           <span className={s.visitors}><strong className={s.number}>2.579</strong>Visitors</span>
         </div>
-        <span className={s.statistic_detail}><Icon_drop_up />+2.45%</span>
+        <span className={s.statistic_detail}><IconDropUp />+2.45%</span>
       </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>

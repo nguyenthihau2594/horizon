@@ -1,10 +1,8 @@
 import s from "./ComplexTable.module.scss"
 import cx from "classnames"
-import data from "./ComplexTable.json"
-
-import { ReactComponent as Icon_check } from 'assets/img/icons/icon_check2.svg';
-import { ReactComponent as Icon_cancel } from 'assets/img/icons/icon_cancel.svg';
-import { ReactComponent as Icon_error } from 'assets/img/icons/icon_error.svg';
+import { ReactComponent as IconCheck } from 'assets/img/icons/icon_check2.svg';
+import { ReactComponent as IconCancel } from 'assets/img/icons/icon_cancel.svg';
+import { ReactComponent as IconError } from 'assets/img/icons/icon_error.svg';
 import {ReactComponent as DropUp} from 'assets/img/icons/icon_arrow_down2.svg';
 
 export interface ComplexTableItemProps {
@@ -27,9 +25,9 @@ function ComplexTableItem(props: ComplexTableItemProps) {
                 <strong className={s.name}>{name}</strong>
             </td>
             <td className={s.status}>
-                {status === 'Approved' && <span className={s.info}><Icon_check />Approved</span>}
-                {status === 'Disable' && <span className={s.info}><Icon_cancel />Disable</span>}
-                {status === 'Error' && <span className={s.info}><Icon_error />Error</span>}
+                {status === 'Approved' && <span className={s.info}><IconCheck />Approved</span>}
+                {status === 'Disable' && <span className={s.info}><IconCancel />Disable</span>}
+                {status === 'Error' && <span className={s.info}><IconError />Error</span>}
             </td>
             <td className={s.date}>{date}</td>
             <td className={s.progress}>

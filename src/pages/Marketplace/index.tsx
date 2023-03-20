@@ -2,7 +2,6 @@ import MainTop from "components/MainTop/MainTop";
 import NFTList , { NFTProps } from "components/NFT/NFT";
 import CreatorsList ,{ CreatorsProps } from "components/Creators/Creators";
 import History ,{ HistoryProps } from "components/History/History";
-import LNB from "layout/LNB";
 import s from "./index.module.scss";
 import data from "../../components/NFT/NFTTrending.json"
 import data2 from "../../components/NFT/Recently.json"

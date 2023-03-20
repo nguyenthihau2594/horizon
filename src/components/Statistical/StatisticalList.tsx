@@ -1,8 +1,6 @@
 
 import s from "./Statistical.module.scss";
-import cx from "classnames";
 import StatisticalItem, { StatisticalItemProps } from 'components/Statistical/StatisticalItems';
-import classNames from "classnames";
 
 type StatisticalListProps = {
 	data: StatisticalItemProps[];

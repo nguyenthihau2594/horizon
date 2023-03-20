@@ -1,10 +1,10 @@
 import { Breadcrumds } from 'components/Breadcrumbs/Breadcrumbs';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import avatar from 'assets/img/avatar.png';
-import { ReactComponent as Icon_search } from 'assets/img/icons/icon_search.svg';
-import { ReactComponent as Icon_alarm } from 'assets/img/icons/icon_alarm.svg';
-import { ReactComponent as Icon_mode } from 'assets/img/icons/icon_mode.svg';
-import { ReactComponent as Icon_tooltip } from 'assets/img/icons/icon_tooltip.svg';
+import { ReactComponent as IconSearch } from 'assets/img/icons/icon_search.svg';
+import { ReactComponent as IconAlarm } from 'assets/img/icons/icon_alarm.svg';
+import { ReactComponent as IconMode } from 'assets/img/icons/icon_mode.svg';
+import { ReactComponent as IconTooltip } from 'assets/img/icons/icon_tooltip.svg';
 import { useState } from "react";
 import cx from "classnames";
 import s from "./MainTop.module.scss";
@@ -98,10 +98,10 @@ export default function MainTop() {
             <div className={s.main_top_right}>
                 <form method="get" action="" className={s.search_form}>
                     <input type="text" placeholder="Search" className={s.inp_search} />
-                    <button type="submit" className={cx(s.btn, s.btn_search)} ><Icon_search /></button>
+                    <button type="submit" className={cx(s.btn, s.btn_search)} ><IconSearch /></button>
                 </form>
                 <div className={cx(s.alarm, { [s.is_open]: openAlarm })}>
-                    <button type="button" className={cx(s.btn, s.btn_alarm)} onClick={handClickAlarm}><Icon_alarm /></button>
+                    <button type="button" className={cx(s.btn, s.btn_alarm)} onClick={handClickAlarm}><IconAlarm /></button>
                     <div className={s.info}>
                         <div className={s.title}>Notification</div>
                         {Notifi.length ? (
@@ -111,7 +111,7 @@ export default function MainTop() {
                                     {Notifi.map((item, index) => (
                                         <li className={s.alarm_item} key={index}>
                                             <a href="#none" className={s.alarm_content}>
-                                                <span className={cx(s.status, { [s.news]: item.status === "news" })}><Icon_alarm /></span>
+                                                <span className={cx(s.status, { [s.news]: item.status === "news" })}><IconAlarm /></span>
                                                 <p className={s.subtitle}>{item.content}</p>
                                                 <span className={s.date}>{item.date}</span>
                                             </a>
@@ -119,13 +119,13 @@ export default function MainTop() {
                                     ))}
                                 </ul>
                             </Scrollbars><Button className={s.btn_more}>View All</Button></>) : (
-                            <div className={s.nodata}><p className={s.text}>No announcements<span className={s.icon}><Icon_tooltip /></span></p></div>
+                            <div className={s.nodata}><p className={s.text}>No announcements<span className={s.icon}><IconTooltip /></span></p></div>
                         )}
                     </div>
                 </div>
-                <button type="button" className={cx(s.btn, s.btn_mode)}><Icon_mode /></button>
+                <button type="button" className={cx(s.btn, s.btn_mode)}><IconMode /></button>
                 <div className={cx(s.tooltip, { [s.is_open]: openTooltip })} >
-                    <button type="button" className={cx(s.btn, s.btn_tooltip)} onClick={handClickTooltip}><Icon_tooltip /></button>
+                    <button type="button" className={cx(s.btn, s.btn_tooltip)} onClick={handClickTooltip}><IconTooltip /></button>
                     <div className={s.info}>This is the displayed content of the tooltip</div>
                 </div>
                 <div className={cx(s.user,{[s.is_open] : openProfile})}>

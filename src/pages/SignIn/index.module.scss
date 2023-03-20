@@ -1,0 +1,236 @@
+@import "assets/styles/_variables.scss";
+@import "assets/styles/_icons.scss";
+@import "assets/styles/_admin.scss";
+
+.wrap {
+    position: relative;
+    z-index: 1;
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 50%;
+        padding-bottom: 120px;
+        border-bottom-left-radius: 200px;
+        background: url(../../assets/img/signin/bg_signin.png);
+        background-size: cover;
+        text-align: center;
+
+        .desc {
+            min-width: 471px;
+            margin-top: 100px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 26px;
+
+            .note {
+                display: block;
+                margin-bottom: 6px;
+                line-height: 18px;
+            }
+
+            .link {
+                display: block;
+                font-size: 29px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 40px;
+
+        .link_back {
+            display: inline-block;
+            position: relative;
+            padding-left: 22px;
+            color: $color6;
+            line-height: 30px;
+
+            &::before {
+                position: absolute;
+                top: 3px;
+                left: -8px;
+                width: 24px;
+                height: 24px;
+                background: url(../../assets/img/icons/icon_back.svg);
+                content: '';
+            }
+        }
+
+        .content {
+            display: flex;
+            flex: 1 1;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 0 18px;
+
+            .info {
+                width: 410px;
+
+                .title {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 36px;
+                    line-height: 56px;
+                }
+
+                .subtitle {
+                    display: block;
+                    margin-bottom: 36px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $color6;
+                    line-height: 1;
+                }
+
+                .btn_google {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin-bottom: 26px;
+                    padding: 15px;
+                    border: none;
+                    border-radius: 16px;
+                    background: $color4;
+                    font-size: 14px;
+                    font-family: $fontfamily;
+                    color: $white;
+                    line-height: 20px;
+                    cursor: pointer;
+
+                    .txt {
+                        margin-left: 9px;
+                    }
+                }
+
+                .or {
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 26px;
+                    color: $color6;
+                    text-align: center;
+                    line-height: 24px;
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        left: 0;
+                        z-index: -2;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        content: '';
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: -1;
+                        width: 45px;
+                        border: 1px solid #0d1438;
+                        transform: translateX(-50%);
+                        content: '';
+                    }
+                }
+
+                .form_signin {
+                    fieldset {
+                        font-size: 0;
+                    }
+                    .noti{
+                        display: block;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 26px;
+                        color: $color6;
+                        margin-top: 26px; a{
+                            color: $white;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form {
+    .inp_group {
+        margin-bottom: 24px;
+
+        .inp_label {
+            display: block;
+            margin-bottom: 13px;
+            line-height: 1;
+
+            .obligatory {
+                color: $color2;
+            }
+        }
+
+        .inp_txt {
+            display: block;
+            width: 100%;
+            height: 50px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            background-color: transparent;
+            color: $white;
+            outline: none;
+            box-sizing: border-box;
+        }
+    }
+
+    .check_group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 31px;
+        margin-bottom: 33px;
+        position: relative;
+        .inp_check{
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            width: 1px;
+            height: 1px;
+            &:checked+.check_label::before{
+                background: url(../../assets/img/icons/icon_check_on.svg);
+            }
+        }
+        .check_label{
+            display: inline-block;
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background: url(../../assets/img/icons/icon_check_off.svg);
+                border-radius: 100%;
+                content: "";
+            }
+        }
+        .fg_pass a{
+            color: $white;
+        }
+    }
+}

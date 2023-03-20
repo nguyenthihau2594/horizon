@@ -1,7 +1,7 @@
 import s from "./ChartPie.module.scss";
 import Highcharts, { SeriesOptionsType } from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { ReactComponent as Icon_drop_up } from 'assets/img/icons/icon_arrow_drop_up2.svg';
+import { ReactComponent as IconDropUp } from 'assets/img/icons/icon_arrow_drop_up2.svg';
 
 const options: Highcharts.Options = {
   chart: {
@@ -99,7 +99,7 @@ export default function ChartPie() {
           <strong className={s.info}>25%</strong>
         </div>
       </div>
-      <button type="button" className={s.btn_select_month}>Monthly<Icon_drop_up /></button>
+      <button type="button" className={s.btn_select_month}>Monthly<IconDropUp /></button>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );

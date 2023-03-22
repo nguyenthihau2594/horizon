@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .footer {
@@ -29,7 +29,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 1.71;
-            color: $white;
+            color: var(--color-text);
         }
     }
 }

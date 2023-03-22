@@ -1,5 +1,4 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
 @import "assets/styles/_admin.scss";
 
 .nft_wrap {
@@ -30,14 +29,18 @@
                 border-radius: 70px;
                 background-color: transparent;
                 font-size: 14px;
-                font-family: $fontfamily;
-                color: $white;
+                font-family: var(--fontfamily);
+                color: var(--color-text);
                 line-height: 24px;
                 cursor: pointer;
 
                 &:hover,
                 &.is_active {
-                    background: $color5;
+                    background: var(--bg-box);
+                }
+
+                [data-theme='light'] & {
+                    color: var(--color2);
                 }
             }
         }
@@ -53,7 +56,7 @@
             width: 350px;
             padding: 21px 21px 22px;
             border-radius: 20px;
-            background: #111C44;
+            background: var(--bg-box);
 
             .img {
                 display: block;
@@ -65,7 +68,8 @@
                     width: 100%;
                 }
             }
-            .icon{
+
+            .icon {
                 display: inline-block;
                 position: absolute;
                 top: 35px;
@@ -84,8 +88,8 @@
                     justify-content: space-between;
                     position: relative;
                     margin-top: 20px;
-                    + .info_group {
-                    }
+
+                    +.info_group {}
 
                     .name {
                         display: block;
@@ -97,7 +101,7 @@
                     .author {
                         font-size: 14px;
                         font-weight: 400;
-                        color: $color6;
+                        color: var(--color6);
                         line-height: 20px;
                     }
 
@@ -109,34 +113,37 @@
                             overflow: hidden;
                             width: 35px;
                             height: 35px;
-                            border: 3px solid #1d254c;
+                            border: 3px solid var(--bg-box1);
                             border-radius: 100%;
                             box-sizing: border-box;
-        
+
                             img {
                                 width: 100%;
                             }
+
                             &+.num_plus,
-                            &+.avatar{
+                            &+.avatar {
                                 margin-left: -16px;
                             }
                         }
-        
+
                         .num_plus {
                             padding-top: 10px;
-                            background-color: #fff;
+                            background-color : var(--bg);
                             font-size: 10px;
                             font-weight: 700;
-                            color: $color2;
+                            // color: var(--color2);
                             text-align: center;
                             line-height: 10px;
                         }
                     }
-                    .bid{
+
+                    .bid {
                         font-size: 14px;
                         line-height: 24px;
                     }
-                    .btn_place_bid{
+
+                    .btn_place_bid {
                         padding: 5px 24px;
                     }
                 }

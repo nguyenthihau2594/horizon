@@ -1,5 +1,4 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
 @import "assets/styles/_admin.scss";
 
 .content {
@@ -17,6 +16,11 @@
             border-radius: 20px;
             background: url(../../assets/img/marketplace/bg_cart_spotlight.png) center no-repeat;
             background-size: cover;
+            color: var(--white);
+
+            [data-theme='light'] & {
+                background: url(../../assets/img/marketplace/bg_cart_spotlight_light.png) center no-repeat;
+            }
 
             &_info {
                 max-width: 377px;
@@ -48,7 +52,7 @@
                         border-radius: 16px;
                         font-size: 14px;
                         font-weight: 500;
-                        font-family: $fontfamily;
+                        font-family: var(--fontfamily);
                         line-height: 24px;
                         cursor: pointer;
                     }

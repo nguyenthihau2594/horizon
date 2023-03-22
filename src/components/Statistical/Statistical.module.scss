@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .statistical {
@@ -23,7 +23,7 @@
         height: 97px;
         padding: 20px 17px;
         border-radius: 20px;
-        background-color: $color5;
+        background-color: var(--bg-box);
     }
 
     .img {
@@ -46,7 +46,7 @@
         display: block;
         font-size: 14px;
         font-weight: 500;
-        color: $color6;
+        color: var(--color6);
         
         line-height: 24px;
     }
@@ -60,7 +60,7 @@
         font-size: 12px;
         line-height: 20px;
         
-        color: $color6;
+        color: var(--color6);
         .highlight{
             color: #01b574;
             margin-right: 4px;
@@ -69,6 +69,7 @@
     &_select{
         flex-direction: row-reverse;
         justify-content: space-between;
+        width: 100%;
         .img{
             margin-right: 0;
             margin-left: 18px;

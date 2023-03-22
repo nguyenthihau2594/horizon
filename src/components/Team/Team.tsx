@@ -3,7 +3,6 @@ import s from "./Team.module.scss";
 import Avatar1 from "assets/img/avatar1.png"
 import Avatar2 from "assets/img/avatar2.png"
 import Avatar3 from "assets/img/avatar3.png"
-import {ReactComponent as MoreAll} from "assets/img/icons/btn_more.svg"
 import {ReactComponent as More} from "assets/img/icons/icon_more3.svg"
 
 
@@ -43,7 +42,7 @@ export default function Team() {
 					)
 				})}
 			</ul>
-			<button type="button" className={s.btn_more_all}><MoreAll /></button>
+			<button type="button" className={s.btn_more_all}></button>
 		</div>
 	);
 }

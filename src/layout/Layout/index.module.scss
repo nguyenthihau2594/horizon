@@ -1,3 +1,8 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
+.wrap{
+    font-family: var(--fontfamily);
+    background-color: var(--bg);
+    color: var(--color-text);
+}

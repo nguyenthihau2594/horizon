@@ -1,10 +1,11 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .wrap {
     position: relative;
     z-index: 1;
+    font-family: 'DM Sans';
 
     .about {
         display: flex;
@@ -54,7 +55,7 @@
             display: inline-block;
             position: relative;
             padding-left: 22px;
-            color: $color6;
+            color: var(--color6);
             line-height: 30px;
 
             &::before {
@@ -90,7 +91,7 @@
                     margin-bottom: 36px;
                     font-size: 16px;
                     font-weight: 400;
-                    color: $color6;
+                    color: var(--color6);
                     line-height: 1;
                 }
 
@@ -103,10 +104,10 @@
                     padding: 15px;
                     border: none;
                     border-radius: 16px;
-                    background: $color4;
+                    background: var(--color4);
                     font-size: 14px;
-                    font-family: $fontfamily;
-                    color: $white;
+                    font-family: var(--fontfamily);
+                    color: var(--color-text);
                     line-height: 20px;
                     cursor: pointer;
 
@@ -120,7 +121,7 @@
                     position: relative;
                     z-index: 1;
                     margin-bottom: 26px;
-                    color: $color6;
+                    color: var(--color6);
                     text-align: center;
                     line-height: 24px;
 
@@ -155,9 +156,9 @@
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 26px;
-                        color: $color6;
+                        color: var(--color6);
                         margin-top: 26px; a{
-                            color: $white;
+                            color: var(--color-text);
                             font-weight: 700;
                         }
                     }
@@ -177,7 +178,7 @@
             line-height: 1;
 
             .obligatory {
-                color: $color2;
+                color: var(--color2);
             }
         }
 
@@ -189,7 +190,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             background-color: transparent;
-            color: $white;
+            color: var(--color-text);
             outline: none;
             box-sizing: border-box;
         }
@@ -230,7 +231,7 @@
             }
         }
         .fg_pass a{
-            color: $white;
+            color: var(--color-text);
         }
     }
 }

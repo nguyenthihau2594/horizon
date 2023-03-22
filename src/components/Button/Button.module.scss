@@ -1,17 +1,17 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .btn{
-    background: #7551FF;
+    background: var(--color2);
     border-radius: 16px;
     padding: 8px 25px;
     border: none;
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
-    color: $white;
-    font-family: $fontfamily;
+    color: var(--white);
+    font-family: var(--fontfamily);
     cursor: pointer;
     &.full_size{
         width: 100%;

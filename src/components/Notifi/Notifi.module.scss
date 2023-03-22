@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 
@@ -24,7 +24,7 @@
         line-height: 24px;
         &.on{
             .btn_switch {
-            background: $color2;
+                background: var(--bg-box2);
                 &::before{
                     left: 19px;
                     transition: all 0.5s;
@@ -43,7 +43,7 @@
             margin-right: 15px;
             border: none;
             border-radius: 39px;
-            background: $color4;
+            background: var(--bg-box1);
             cursor: pointer;
             &::before{
                 position: absolute;
@@ -52,7 +52,7 @@
                 width: 14px;
                 height: 14px;
                 border-radius: 100%;
-                background-color: $white;
+                background-color: var(--white);
                 content: '';
                 transition: all 0.5s;
             }

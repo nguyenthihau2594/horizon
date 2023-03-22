@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .btn {
@@ -40,7 +40,7 @@
 		width: 422px;
 		padding: 10px;
 		border-radius: 30px;
-		background-color: $color5;
+		background-color: var(--bg-box);
 
 		.search_form {
 			position: relative;
@@ -53,9 +53,10 @@
 				border: none;
 				border-radius: 49px;
 				background: #0b1437;
-				color: $white;
+				color: var(--color-text);
 				outline: none;
 				box-sizing: border-box;
+				background-color: var(--bg);
 			}
 		}
 
@@ -75,7 +76,7 @@
 					padding: 10px 15px;
 					border: 1px solid #ccc;
 					border-radius: 10px;
-					background-color: #0d1438;
+					background-color: var(--bg);
 					font-size: 12px;
 					font-style: italic;
 					line-height: 1.5;
@@ -103,7 +104,7 @@
 						right: 12px;
 						margin-right: 2px;
 						border-width: 6px;
-						border-bottom-color: #0f1439;
+						border-bottom-color: var(--bg);
 					}
 				}
 			}
@@ -171,7 +172,7 @@
 				display: block;
 				position: relative;
 				padding-left: 35px;
-				color: $white;
+				color: var(--color-text);
 
 				.status {
 					position: absolute;
@@ -221,7 +222,7 @@
 				padding: 10px 20px;
 				border: 1px solid #ccc;
 				border-radius: 10px;
-				background-color: #0d1438;
+				background-color: var(--bg);
 				line-height: 1.5;
 				box-shadow: 1px 1px 5px 0px #ccc;
 
@@ -247,7 +248,7 @@
 					right: 12px;
 					margin-right: 2px;
 					border-width: 6px;
-					border-bottom-color: #0f1439;
+					border-bottom-color: var(--bg);
 				}
 
 				li {
@@ -258,7 +259,7 @@
 					a {
 						display: block;
 						font-size: 14px;
-						color: $white;
+						color: var(--color-text);
 					}
 				}
 			}

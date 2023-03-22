@@ -3,6 +3,9 @@ import cx from "classnames"
 import Button  from "components/Button/Button";
 import { ReactComponent as IconEdit } from 'assets/img/icons/icon_edit.svg';
 import { ReactComponent as IconPlus } from 'assets/img/icons/icon_plus.svg';
+import { ReactComponent as IconPlusLight } from 'assets/img/icons/icon_plus_light.svg';
+import { useContext } from "react";
+import { ThemeContext } from "hook/ThemeContext";
 
 export interface CardProps {
     title: string;
@@ -45,6 +48,7 @@ function CardItem({dataItem}: dataProp) {
 }
 
 export default function Card({ kind, data }: CardListProps) {
+    const context = useContext<any>(ThemeContext)
     return (
         <div className={s.kanban}>
             <strong className={s.title}>{kind}</strong>
@@ -55,7 +59,7 @@ export default function Card({ kind, data }: CardListProps) {
                     )
                 })}
             </ul>
-            <button type="button" className={s.btn_add}><IconPlus /></button>
+            <button type="button" className={s.btn_add}>{context.theme === 'light' ?<IconPlusLight /> : <IconPlus />}</button>
         </div>
     )
 }

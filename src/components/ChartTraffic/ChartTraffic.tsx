@@ -9,8 +9,7 @@ const options: Highcharts.Options = {
   chart: {
     type: "column",
     animation: false,
-    backgroundColor: "#111C44",
-    borderRadius: 20,
+    backgroundColor: "transparent",
     height: "345",
     className: "chart_traffic",
     margin: [100, 10, 60, 10]

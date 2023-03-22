@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .cards {
@@ -8,7 +8,7 @@
     margin-top: 20px;
     padding: 36px 30px 23px;
     border-radius: 20px;
-    background-color: $color5;
+    background-color: var(--bg-box);
 
     .img {
         display: block;
@@ -26,7 +26,7 @@
 
     .desc {
         font-size: 14px;
-        color: $color6;
+        color: var(--color6);
         line-height: 24px;
         margin-bottom: 36px;
     }

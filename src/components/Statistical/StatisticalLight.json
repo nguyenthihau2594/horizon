@@ -1,0 +1,38 @@
+[
+    {
+    "type": "normal",
+	"thumb": "/img/img_statistical1_light.png",
+	"title": "Earnings",
+	"unit": "350.4"
+    },
+    {
+        "type": "normal",
+        "thumb": "/img/img_statistical2_light.png",
+        "title": "Spend this Month",
+        "unit": "682.5"
+    },
+    {
+        "type": "increase",
+        "title": "Sales",
+        "unit": "574.34",
+        "increase": 23
+    },
+    {
+        "type": "select",
+        "thumb": "/img/img_statistical3_light.png",
+        "title": "Earnings",
+        "unit": "1,000"
+    },
+    {
+        "type": "number",
+        "thumb": "/img/img_statistical4_light.png",
+        "title": "New Tasks",
+        "unit": "154"
+    },
+    {
+        "type": "number",
+        "thumb": "/img/img_statistical5_light.png",
+        "title": "Total Projects",
+        "unit": "2933"
+    }
+]

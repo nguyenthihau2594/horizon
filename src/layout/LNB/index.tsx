@@ -2,9 +2,14 @@ import { Link, useLocation } from "react-router-dom";
 import s from "./index.module.scss";
 import cx from "classnames";
 import Logo from "assets/img/logo.png";
+import LogoLight from "assets/img/logo_light.png";
+import { useContext } from "react";
+import { ThemeContext } from "hook/ThemeContext";
 
 export default function LNB() {
   const location = useLocation();
+  const context = useContext<any>(ThemeContext)
+
   const menu = [
     {
       to: "/admin/dashboard",
@@ -42,19 +47,19 @@ export default function LNB() {
     <div className={s.lnb}>
       <h1 className={s.logo}>
         <Link to="/">
-          <img src={Logo} alt="hoziron" />
+          <img src={context.theme === 'light' ? LogoLight : Logo} alt="hoziron" />
         </Link>
       </h1>
       <div className={s.nav}>
         <ul className={s.nav__list}>
           {menu.map((item, index) => {
             return (
-              <li className={s.nav__item} key={index}>
-                <Link to={item.to} className={s.nav__link}>
+              <li className={cx(s.nav__item, {
+                [s.is_active]: item.to === location.pathname
+              })} key={index}>
+                <Link to={item.to} className={cx(s.nav__link)}>
                   <i
-                    className={cx(s.icon, s[`${item.icon}`], {
-                      [s.is_active]: item.to === location.pathname,
-                    })}
+                    className={cx(s.icon, s[`${item.icon}`])}
                   ></i>
                   {item.text}
                 </Link>

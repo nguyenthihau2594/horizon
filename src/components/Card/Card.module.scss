@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .kanban {
@@ -7,7 +7,7 @@
     width: calc((100% - 40px)/3);
     padding: 28px 24px 24px;
     border-radius: 20px;
-    background: $color5;
+    background: var(--bg-box);
 
     .title {
         display: block;
@@ -24,7 +24,7 @@
         height: 35px;
         border: none;
         border-radius: 12px;
-        background: $color4;
+        background: var(--color4);
         cursor: pointer;
     }
 
@@ -33,7 +33,7 @@
             position: relative;
             padding: 18px 22px;
             border-radius: 20px;
-            background: $color4;
+            background: var(--color4);
             .user {
 
                 .num_plus,
@@ -42,7 +42,7 @@
                     overflow: hidden;
                     width: 35px;
                     height: 35px;
-                    border: 3px solid #1d254c;
+                    border: 3px solid var(--bg-box1);
                     border-radius: 100%;
                     box-sizing: border-box;
 
@@ -57,10 +57,9 @@
 
                 .num_plus {
                     padding-top: 10px;
-                    background-color: #fff;
+                    background-color : var(--bg);
                     font-size: 10px;
                     font-weight: 700;
-                    color: $color2;
                     text-align: center;
                     line-height: 10px;
                 }
@@ -119,7 +118,7 @@
             margin-bottom: 29px;
             font-size: 16px;
             font-weight: 400;
-            color: $color6;
+            color: var(--color6);
             line-height: 26px;
         }
 

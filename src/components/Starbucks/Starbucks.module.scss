@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 .starbucks {
@@ -9,7 +9,7 @@
     margin-top: 20px;
     padding: 20px 33px 33px;
     border-radius: 20px;
-    background-color: $color5;
+    background-color: var(--bg-box);
 
     .img_bg {
         margin: 0 -13px;
@@ -36,7 +36,7 @@
         align-items: center;
         font-size: 18px;
         line-height: 30px;
-        color: $color6;
+        color: var(--color6);
         svg{
             margin-right: 10px;
         }

@@ -7,8 +7,7 @@ const options: Highcharts.Options = {
   chart: {
     type: "pie",
     animation: false,
-    backgroundColor: "#111C44",
-    borderRadius: 20,
+    backgroundColor: "transparent",
     height: "345",
     className: "chart_pie",
     margin: [60,0, 120]

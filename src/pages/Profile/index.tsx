@@ -6,16 +6,26 @@ import Bg from "assets/img/bg_profile.png";
 import Avatar from "assets/img/avatar.png"
 import Button from "components/Button/Button";
 import { ReactComponent as IconCloud } from 'assets/img/icons/icon_cloud.svg';
+import { ReactComponent as IconCloudLight } from 'assets/img/icons/icon_cloud_light.svg';
 import { ReactComponent as IconUpload } from 'assets/img/icons/icon_upload.svg';
-import { useState } from "react";
+import { ReactComponent as IconUploadLight } from 'assets/img/icons/icon_upload_light.svg';
+import { useContext, useEffect, useState } from "react";
 import Project from "components/Project/Project";
 import General from "components/General/General";
 import Notifi from "components/Notifi/Notifi";
+import { ThemeContext } from "hook/ThemeContext";
 
 export default function User() {
 	const [avatar, setAvatar] = useState<{ preview: "", name: "" }>();
 	const [dragActive, setDragActive] = useState(false)
 	const [error, setError] = useState(false)
+	const context = useContext<any>(ThemeContext)
+	useEffect(() => {
+		// clearnup avatar if not use
+		return () => {
+			avatar && URL.revokeObjectURL(avatar.preview)
+		}
+	},[avatar])
 
 
 	const handleChange = (e: any) => {
@@ -80,7 +90,7 @@ export default function User() {
 					</ul>
 				</div>
 				<div className={cx(s.storage, s.content_box)}>
-					<div className={s.icon_logo}><IconCloud /></div>
+					<div className={s.icon_logo}>{context.theme === 'light' ? <IconCloudLight /> : <IconCloud />}</div>
 					<strong className={s.title}>Your storage</strong>
 					<p className={s.desc}>
 						Supervise your drive space in the easiest way
@@ -102,7 +112,7 @@ export default function User() {
 								<label htmlFor="upload" className={cx(s.label)} 
 							 onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}
 							 >
-								{avatar ? (<><img src={avatar.preview} alt="" /><span className={s.txt}>{avatar.name}</span></>) : (<><IconUpload /><span className={s.txt}>Upload Files</span></>)}
+								{avatar ? (<><img src={avatar.preview} alt="" /><span className={s.txt}>{avatar.name}</span></>) : (<>{context.theme === 'light' ? <IconUploadLight /> : <IconUpload />}<span className={s.txt}>Upload Files</span></>)}
 
 							</label>
 							<span className={cx(s.note, { [s.error]: error })}>PNG, JPG and GIF files are allowed</span>

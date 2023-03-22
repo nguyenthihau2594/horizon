@@ -1,4 +1,3 @@
-@import "assets/styles/_variables.scss";
 @import "assets/styles/_icons.scss";
 
 .lnb {
@@ -8,11 +7,16 @@
     width: 290px;
     height: 100vh;
     padding: 25px 0 0;
-    background-color: $color4;
+    background-color: var(--color4);
 
     .logo {
         padding: 30px 54px 48px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0;
+
+        [data-theme='light'] & {
+            border-bottom-color: var(--bg);
+        }
     }
 
     .nav {
@@ -34,7 +38,7 @@
             justify-content: flex-start;
             font-size: 16px;
             font-weight: 500;
-            color: $white;
+            color: var(--color-text);
             text-decoration: none;
             line-height: 1.875;
 
@@ -57,7 +61,8 @@
         border-radius: 24px;
         background: linear-gradient(135deg, #868CFF 0%, #4318FF 100%);
         text-align: center;
-        
+        color: var(--white);
+
 
         &::before {
             position: absolute;
@@ -79,9 +84,29 @@
         }
 
         .desc {
-            font-weight: 500;
             font-size: 14px;
+            font-weight: 500;
             line-height: 1.71;
+        }
+    }
+}
+
+[data-theme="light"] {
+    .lnb {
+        .nav__item {
+
+            &:hover,
+            &.is_active {
+                .nav__link {
+                    color: var(--color-text);
+                    opacity: 1;
+                }
+            }
+
+            .nav__link {
+                color: var(--color6);
+                opacity: 1;
+            }
         }
     }
 }

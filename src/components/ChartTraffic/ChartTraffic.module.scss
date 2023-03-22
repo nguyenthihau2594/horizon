@@ -1,46 +1,52 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
 @import "assets/styles/_admin.scss";
 
-.chart_traffic{
+.chart_traffic {
     position: relative;
     width: calc(25% - 15px);
     margin-top: 20px;
-    &_info{
+    border-radius: 20px;
+    background-color: var(--bg-box);
+
+    &_info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
         position: absolute;
         top: 25px;
-        left: 25px;
         right: 22px;
+        left: 25px;
         z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        .title{
+
+        .title {
             display: block;
-            font-size: 14px;
-            color: $color6;
-            line-height: 24px;
             margin-bottom: 3px;
-        }
-        .visitors{
-            color: $color6;
             font-size: 14px;
+            color: var(--color6);
             line-height: 24px;
-            .number{
-                color: $white;
-                font-weight: 700;
-                font-size: 34px;
-                line-height: 42px;
+        }
+
+        .visitors {
+            font-size: 14px;
+            color: var(--color6);
+            line-height: 24px;
+
+            .number {
                 margin-right: 3px;
+                font-size: 34px;
+                font-weight: 700;
+                color: var(--color-text);
+                line-height: 42px;
             }
         }
-        .statistic_detail{
+
+        .statistic_detail {
             display: flex;
             align-items: center;
-            font-weight: 700;
             font-size: 12px;
-            line-height: 20px;
+            font-weight: 700;
             color: #01B574;
+            line-height: 20px;
         }
     }
 }

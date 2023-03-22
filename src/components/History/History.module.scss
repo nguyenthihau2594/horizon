@@ -1,5 +1,5 @@
-@import "assets/styles/_variables.scss";
-@import "assets/styles/_icons.scss";
+
+
 @import "assets/styles/_admin.scss";
 
 
@@ -8,7 +8,7 @@
     margin-top: 20px;
     padding: 20px 18px 25px;
     border-radius: 20px;
-    background-color: $color5;
+    background-color: var(--bg-box);
 
     .title {
         display: block;
@@ -35,11 +35,11 @@
         justify-content: space-between;
         align-items: center;
         padding:18px 20px;
-        color: $white;
+        color: var(--color-text);
         font-size: 16px;
         line-height: 20px;
         &:hover{
-            background: #1B254B;
+            background-color: var(--bg-box1);
             border-radius: 20px;
         }
         .thumb{
@@ -64,7 +64,7 @@
             font-size: 14px;
             line-height: 20px;
             font-weight: 400;
-            color: $color6;
+            color: var(--color6);
         }
         .bid{
             display: flex;

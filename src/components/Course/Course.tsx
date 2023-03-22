@@ -1,18 +1,22 @@
 import {ReactComponent as Time} from "assets/img/icons/icon_time.svg"
 import {ReactComponent as Video} from "assets/img/icons/icon_video.svg"
 import {ReactComponent as Fire} from "assets/img/icons/icon_fire.svg"
+import {ReactComponent as FireLight} from "assets/img/icons/icon_fire.svg"
 import Avatar1 from "assets/img/avatar1.png"
 import Avatar2 from "assets/img/avatar2.png"
 import Avatar3 from "assets/img/avatar3.png"
 import Avatar4 from "assets/img/avatar4.png"
 import s from "./Course.module.scss";
 import Button  from "components/Button/Button"
+import { useContext } from "react"
+import { ThemeContext } from "hook/ThemeContext"
 
 export default function Course() {
+	const context = useContext<any>(ThemeContext)
 	return (
 		<div className={s.tasks}>
 			<div className={s.title_category}>
-				<span className={s.title_icon}><Fire /></span>
+				<span className={s.title_icon}>{context.theme === 'light' ? <FireLight /> : <Fire />}</span>
 				<div className={s.title_txt}>
 					<strong className={s.subtitle}>Business Design</strong>
 					<strong className={s.title}>New lession is available</strong>

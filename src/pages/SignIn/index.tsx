@@ -58,7 +58,7 @@ export default function SignIn() {
         </div>
         <button type="button" onClick={context.toggleTheme} className={s.btn_mode}><IconMode /></button>
       </div>
-      <Footer />
+      <Footer className="footer_signin" sPage={s} />
     </div>
   );
 }

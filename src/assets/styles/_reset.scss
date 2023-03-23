@@ -145,4 +145,8 @@ a {
     font-family: var(--fontfamily);
     background-color: var(--bg);
     color: var(--color-text);
+    @media screen and (min-width: 1025px) {
+        width: 100%;
+        min-width: 1900px;
+    }
 }

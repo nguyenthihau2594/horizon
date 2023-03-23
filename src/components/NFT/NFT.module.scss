@@ -57,7 +57,6 @@
             padding: 21px 21px 22px;
             border-radius: 20px;
             background: var(--bg-box);
-
             .img {
                 display: block;
                 overflow: hidden;
@@ -86,10 +85,9 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    flex-wrap: wrap;
                     position: relative;
                     margin-top: 20px;
-
-                    +.info_group {}
 
                     .name {
                         display: block;
@@ -106,7 +104,7 @@
                     }
 
                     .user {
-
+    
                         .num_plus,
                         .avatar {
                             display: inline-block;
@@ -132,7 +130,6 @@
                             background-color : var(--bg);
                             font-size: 10px;
                             font-weight: 700;
-                            // color: var(--color2);
                             text-align: center;
                             line-height: 10px;
                         }

@@ -1,10 +1,10 @@
-
-
 @import "assets/styles/_admin.scss";
 
 .wrap {
+    [data-theme='light'] & {
+        background-color: var(--white);
+    }
     position: relative;
-    z-index: 1;
     font-family: 'DM Sans';
 
     .about {
@@ -15,7 +15,6 @@
         top: 0;
         right: 0;
         bottom: 0;
-        z-index: -1;
         width: 50%;
         padding-bottom: 120px;
         border-bottom-left-radius: 200px;
@@ -29,6 +28,7 @@
             padding: 30px;
             border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 26px;
+            color: var(--white);
 
             .note {
                 display: block;
@@ -75,6 +75,9 @@
             align-items: center;
             justify-content: center;
             padding: 0 0 0 18px;
+            margin: 0;
+            width: auto;
+            max-width: 100%;
 
             .info {
                 width: 410px;
@@ -104,7 +107,7 @@
                     padding: 15px;
                     border: none;
                     border-radius: 16px;
-                    background: var(--color4);
+                    background: var(--bg-box1);
                     font-size: 14px;
                     font-family: var(--fontfamily);
                     color: var(--color-text);
@@ -131,7 +134,7 @@
                         right: 0;
                         left: 0;
                         z-index: -2;
-                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border: 1px solid var(--bg-box1);
                         content: '';
                     }
 
@@ -141,9 +144,13 @@
                         left: 50%;
                         z-index: -1;
                         width: 45px;
-                        border: 1px solid #0d1438;
+                        border: 1px solid var(--bg);
                         transform: translateX(-50%);
                         content: '';
+
+                        [data-theme='light'] & {
+                            border-color: var(--white);
+                        }
                     }
                 }
 
@@ -151,19 +158,31 @@
                     fieldset {
                         font-size: 0;
                     }
-                    .noti{
+
+                    .noti {
                         display: block;
-                        font-weight: 400;
+                        margin-top: 26px;
                         font-size: 14px;
-                        line-height: 26px;
+                        font-weight: 400;
                         color: var(--color6);
-                        margin-top: 26px; a{
-                            color: var(--color-text);
+                        line-height: 26px;
+
+                        a {
                             font-weight: 700;
+                            color: var(--color-text);
                         }
                     }
                 }
             }
+        }
+
+        .btn_mode {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            border: none;
+            background: none;
+            cursor: pointer;
         }
     }
 }
@@ -193,6 +212,10 @@
             color: var(--color-text);
             outline: none;
             box-sizing: border-box;
+
+            [data-theme='light'] & {
+                border-color: #E0E5F2;
+            }
         }
     }
 
@@ -200,37 +223,42 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
         margin-top: 31px;
         margin-bottom: 33px;
-        position: relative;
-        .inp_check{
+
+        .inp_check {
             visibility: hidden;
             position: absolute;
             top: 100%;
             left: 100%;
             width: 1px;
             height: 1px;
-            &:checked+.check_label::before{
-                background: url(../../assets/img/icons/icon_check_on.svg);
+
+            &:checked+.check_label::before {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_101_12199)'%3E%3Cpath d='M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM10.71 16.29C10.32 16.68 9.69 16.68 9.3 16.29L5.71 12.7C5.32 12.31 5.32 11.68 5.71 11.29C6.1 10.9 6.73 10.9 7.12 11.29L10 14.17L16.88 7.29C17.27 6.9 17.9 6.9 18.29 7.29C18.68 7.68 18.68 8.31 18.29 8.7L10.71 16.29Z' fill='%237551FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_101_12199'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
             }
         }
-        .check_label{
+
+        .check_label {
             display: inline-block;
             position: relative;
             padding-left: 35px;
             cursor: pointer;
-            &::before{
+
+            &::before {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 24px;
                 height: 24px;
-                background: url(../../assets/img/icons/icon_check_off.svg);
                 border-radius: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_101_9790)'%3E%3Cpath d='M19 5V19H5V5H19ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z' fill='%23A3AED0'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_101_9790'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
                 content: "";
             }
         }
-        .fg_pass a{
+
+        .fg_pass a {
             color: var(--color-text);
         }
     }

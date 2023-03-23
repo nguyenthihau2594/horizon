@@ -1,22 +1,21 @@
-
-
-@import "assets/styles/_admin.scss";
-
 .footer {
     padding-left: 290px;
 
     .inner {
-        padding: 20px 50px 22px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1630px;
+        margin: 0 auto;
+        padding: 20px 50px 22px;
     }
 
     .nav {
         &__list {
             display: flex;
-            justify-content: flex-end;
             align-items: center;
+            justify-content: flex-end;
         }
 
         &__item {
@@ -25,11 +24,11 @@
 
         &__link {
             display: inline-block;
-            
-            font-weight: 500;
             font-size: 14px;
-            line-height: 1.71;
+
+            font-weight: 500;
             color: var(--color-text);
+            line-height: 1.71;
         }
     }
 }

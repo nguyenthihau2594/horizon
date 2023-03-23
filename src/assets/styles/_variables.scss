@@ -1,19 +1,25 @@
 
 
 :root{
+    --fontfamily: DM Sans, 'DM Sans', sans-serif;
+
     --white: #fff;
     --bg: #0b1437;
     --bg-box: #111C44;
     --bg-box1: #1B254B;
     --bg-box2: #7551FF;
     --color-text: #fff;
-
     --color1: #0B1437;
     --color2: #7551FF;
     --color3: #39B8FF;
     --color4: #1B254B;
     --color6: #A3AED0;
-    --fontfamily: DM Sans, 'DM Sans', sans-serif;
+
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+    --xxl: 1400px;
 }
 [data-theme="light"]{
     --bg: #F4F7FE;

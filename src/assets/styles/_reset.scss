@@ -140,3 +140,9 @@ div,li {
 a {
     text-decoration: none;
 }
+
+[data-theme]{
+    font-family: var(--fontfamily);
+    background-color: var(--bg);
+    color: var(--color-text);
+}

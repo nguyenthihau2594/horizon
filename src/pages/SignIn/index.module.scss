@@ -183,6 +183,16 @@
             border: none;
             background: none;
             cursor: pointer;
+            z-index: 3;
+        }
+    }
+
+    .footer_signin{
+        z-index: 1;
+        padding-right: 255px;
+
+        .nav__footer_signin{
+            color: var(--white);
         }
     }
 }

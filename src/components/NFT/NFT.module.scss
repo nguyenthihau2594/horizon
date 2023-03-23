@@ -1,5 +1,5 @@
 
-@import "assets/styles/_admin.scss";
+
 
 .nft_wrap {
     margin-top: 20px;
@@ -53,7 +53,7 @@
 
         .nft_item {
             position: relative;
-            width: 350px;
+            width: calc((100% - 40px)/3);
             padding: 21px 21px 22px;
             border-radius: 20px;
             background: var(--bg-box);

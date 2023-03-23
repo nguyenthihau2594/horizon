@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import s from "./index.module.scss";
 import logo from 'assets/img/signin/logo.png';
 import { ReactComponent as IconGoogle } from 'assets/img/icons/icon_google.svg';
+import { ReactComponent as IconMode } from 'assets/img/icons/icon_mode_signin_light.svg';
 import Button from "components/Button/Button";
+import { useContext } from "react";
+import { ThemeContext } from "hook/ThemeContext";
 
 export default function SignIn() {
+  const context=useContext<any>(ThemeContext)
   return (
     <div className={s.wrap}>
       <div className={s.main}>
@@ -52,6 +56,7 @@ export default function SignIn() {
             </div>
           </div>
         </div>
+        <button type="button" onClick={context.toggleTheme} className={s.btn_mode}><IconMode /></button>
       </div>
       <Footer />
     </div>

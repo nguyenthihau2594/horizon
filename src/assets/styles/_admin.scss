@@ -1,17 +1,16 @@
-
-
-
 .wrap {
-    position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    min-height: 100vh;
 
     .main {
-        padding-left: 290px;
         flex: 1 1;
-
+        padding-left: 290px;
         .content {
+            width: 100%;
+            max-width: 1630px;
+            margin: 0 auto;
             padding: 50px 20px 0;
         }
     }
